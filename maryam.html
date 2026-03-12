@@ -4,8 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
+  <style type="text/tailwindcss">
+    @theme {
+      /* ---- colors ----*/
+      --color-gray-scale-900: #1D2026;
+      --color-gray-scale-800: #363B47 ;
+      --color-gray-scale-700: #4E5566;
+      --color-gray-scale-600: #6E7485;
+      --color-gray-scale-500: #8C94A3;
+      --color-gray-scale-400: #A1A5B3;
+      --color-gray-scale-300: #B7BAC7;
+      --color-gray-scale-200: #CED1D9;
+      --color-gray-scale-100: #E9EAF0;
+      --color-gray-scale-50:  #F5F7FA;
+
+      --color-primary-900: #33140B;
+      --color-primary-800: #662916;
+      --color-primary-700: #993D20;
+      --color-primary-600: #CC522B;
+      --color-primary-500: #FF6636;
+      --color-primary-400: #FF855E;
+      --color-primary-300: #FFA386;
+      --color-primary-200: #FFDDD1;
+      --color-primary-100: #FFEEE8;
+
+      --color-secondary-900: #111033;
+      --color-secondary-800: #222065;
+      --color-secondary-700:#342F98;
+      --color-secondary-600: #453FCA;
+      --color-secondary-500: #564FFD;
+      --color-secondary-400: #7872FD;
+      --color-secondary-300: #9A95FE;
+      --color-secondary-200: #CDCBFE;
+      --color-secondary-100: #EBEBFF;
+
+      --color-Success-900: #07260A;
+      --color-Success-800: #0E4C14;
+      --color-Success-700: #15711F;
+      --color-Success-600: #1C9729;
+      --color-Success-500: #23BD33;
+      --color-Success-400: #4FCA5C;
+      --color-Success-300: #7BD785;
+      --color-Success-200: #C3E5C6;
+      --color-Success-100: #E1F7E3;
+
+      --color-Warning-900: #331D06;
+      --color-Warning-800: #65390C;
+      --color-Warning-700: #985613;
+      --color-Warning-600: #CC7319;
+      --color-Warning-500: #FD8E1F;
+      --color-Warning-400: #FDA44C;
+      --color-Warning-300: #FEBB79;
+      --color-Warning-200: #FED1A5;
+      --color-Warning-100: #FFF2E5;
+
+      --color-Danger-900: #2D0E0E;
+      --color-Danger-800: #5B1B1B;
+      --color-Danger-700: #882929;
+      --color-Danger-600: #B63636;
+      --color-Danger-500: #E34444;
+      --color-Danger-400: #E96969;
+      --color-Danger-300: #EE8F8F;
+      --color-Danger-200: #F4C8C8;
+      --color-Danger-100: #FFF0F0;
+
+      /* ---- font ---- */
+      --font-inter: "Inter", sans-serif;
+      --font-inherit: inherit;
+
+      /* ---- text-size ---- */
+        /* Display */
+      --text-D1: 80px;
+      --text-D1--line-height: 80px;
+      --text-D2: 72px;
+      --text-D2--line-height: 74px;
+      --text-D3: 64px;
+      --text-D3--line-height: 68px;
+        /* Heading */
+      --text-H1: 48px;
+      --text-H1--line-height: 52px;
+      --text-H2: 40px;
+      --text-H2--line-height: 48px;
+      --text-H3: 32px;
+      --text-H3--line-height: 40px;
+      --text-H4: 24px;
+      --text-H4--line-height: 32px;
+        /* Label */
+      --text-lb-xxl: 18px;
+      --text-lb-xxl--line-height: 100%;
+      --text-lb-xl: 16px;
+      --text-lb-xl--line-height: 100%;
+      --text-lb-lg: 14px;
+      --text-lb-lg--line-height: 100%;
+      --text-lb-m: 12px;
+      --text-lb-m--line-height: 12px;
+      --text-lb-s: 10px;
+      --text-lb-s--line-height: 12px;
+        /* Button */
+      --text-bt-lg: 18px;
+      --text-bt-lg--line-height: 56px;
+      --text-bt-m: 16px;
+      --text-bt-m--line-height: 48px;
+      --text-bt-s: 14px;
+      --text-bt-s--line-height: 40px;
+        /* Body */
+      --text-bdy-3xl: 24px;
+        --text-bdy-3xl--line-height: 32px;
+      --text-bdy-2xl: 20px;
+        --text-bdy-2xl--line-height: 32px;
+      --text-bdy-2xl-2: 20px;
+        --text-bdy-2xl-2--line-height: 26px;
+      --text-bdy-xl: 18px;
+        --text-bdy-xl--line-height: 24px;
+      --text-bdy-lg: 16px;
+        --text-bdy-lg--line-height: 22px;
+      --text-bdy-lg-2: 16px;
+        --text-bdy-lg-2--line-height: 24px;
+      --text-bdy-md: 14px;
+        --text-bdy-md--line-height: 20px;
+      --text-bdy-md-2: 14px;
+        --text-bdy-md-2--line-height: 22px;
+      --text-bdy-sm: 12px;
+        --text-bdy-sm--line-height: 16px;
+      --text-bdy-xs: 10px;
+        --text-bdy-xs--line-height: 10px;
+
+
+    }
+
+    body { @apply font-inter }
+
+    button,
+    input,
+    select,
+    textarea { @apply font-inherit }
+
+    .display1{ @apply text-D1 font-semibold tracking-[-2%]}
+    .display2{ @apply text-D2 font-semibold tracking-[-2%]}
+    .display3{ @apply text-D3 font-semibold tracking-[-2%] } 
+
+    .heading1{ @apply text-H1 font-semibold tracking-[-2%] }
+    .heading2{ @apply text-H2 font-semibold tracking-[-1%] }
+    .heading3{ @apply text-H3 font-semibold tracking-[-1%] }
+    .heading4{ @apply text-H4 font-semibold tracking-[-1%] }
+
+    .label-xxl{ @apply text-lb-xxl font-medium uppercase}
+    .label-xl{ @apply text-lb-xl font-medium uppercase }
+    .label-lg{ @apply text-lb-lg font-medium uppercase }
+    .label-md{ @apply text-lb-m font-medium uppercase }
+    .label-sm{ @apply text-lb-s font-medium uppercase }
+
+    .body-xxl{ @apply text-bdy-3xl font-normal}
+    .body-xxl-400{ @apply text-bdy-2xl font-normal} 
+    .body-xxl-500{ @apply text-bdy-2xl-2 font-medium}
+    .body-xxl-600{ @apply text-bdy-2xl-2 font-semibold}
+    .body-xl-400{ @apply text-bdy-xl font-normal tracking-[-1.5%]}
+    .body-xl-500{ @apply text-bdy-xl font-medium}
+    .body-xl-600{ @apply text-bdy-xl font-semibold}
+    .body-lg-400{ @apply text-bdy-lg-2 font-normal tracking-[-0%]}
+    .body-lg-500{ @apply text-bdy-lg font-medium}
+    .body-lg-600{ @apply text-bdy-lg font-semibold}
+    .body-md-400{ @apply text-bdy-md-2 font-normal tracking-[-1%]}
+    .body-md-500{ @apply text-bdy-md font-medium tracking-[-1%]}
+    .body-md-600{ @apply text-bdy-md font-semibold tracking-[-1%]}
+    .body-sm-400{ @apply text-bdy-sm font-normal}
+    .body-sm-500{ @apply text-bdy-sm font-medium}
+    .body-sm-600{ @apply text-bdy-sm font-semibold}
+    .body-tiny-400{ @apply text-bdy-xs font-normal}
+    .body-tiny-500{ @apply text-bdy-xs font-medium}
+    .body-tiny-600{ @apply text-bdy-xs font-semibold}
+
+    .btn-sm { @apply text-bt-s font-semibold tracking-[-0.4%] capitalize }
+    .btn-md { @apply text-bt-m font-semibold tracking-[-0.8%] capitalize }
+    .btn-lg { @apply text-bt-lg font-semibold tracking-[-1%] capitalize }
+
+    .btn-sm-size { @apply px-[16px]} 
+    .btn-md-size { @apply px-[24px]}
+    .btn-lg-size { @apply px-[32px]}
+
+
+    .btn-primary-primary { @apply bg-primary-500 hover:bg-primary-600 text-white transition-transform duration-300 ease-in-out }
+
+    .btn-primary-secondary { @apply bg-secondary-500 hover:bg-secondary-600 text-white transition-transform duration-300 ease-in-out }
+
+    .btn-primary-gray { @apply bg-gray-scale-900 hover:bg-gray-scale-800 text-white transition-transform duration-300 ease-in-out }
+
+    .btn-primary-gray-2 { @apply bg-gray-scale-800 hover:bg-gray-scale-700 text-white transition-transform duration-300 ease-in-out }
+
+    .btn-secondary-primary { @apply bg-primary-100 hover:bg-primary-200 text-primary-500 hover:text-primary-600 transition-transform duration-300 ease-in-out }
+
+    .secondary-secondary { @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-500 hover:text-secondary-600 transition-transform duration-300 ease-in-out
+    }
+
+    .secondary-gray { @apply bg-gray-scale-50 hover:bg-gray-scale-100 text-gray-scale-900 hover:text-gray-scale-800 transition-transform duration-300 ease-in-out
+    }
+
+    
+
+  </style>
 <body>
   
+<button class="btn-primary-primary text-white">hello there</button>
+
 </body>
 </html>
