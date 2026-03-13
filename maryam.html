@@ -282,6 +282,25 @@
 
     .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
 
+    /**********************/
+      /* Form elements */
+    /**********************/
+
+    .left-icon { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px]}
+
+    .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 hover:outline hover:outline-3 hover:outline-primary-200 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer}
+
+
+    /* nav */
+    nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
+    .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition-transform duration-800 ease-in-out}
+    .langs { @apply flex gap-[24px] }
+    .lang { @apply flex gap-[6px] items-center }
+    /* navbar */
+    navbar{ @apply flex justify-between px-[32px] py-[24px] border-b border-b-gray-scale-100}
+
+    .forms{ @apply flex gap-[16px] }
+
 
   </style>
 <body>
@@ -289,43 +308,51 @@
 <header>
     <nav>
       <div>
-        <a href="#" class="body-meduim-500">Home</a>
-        <a href="#" class="body-meduim-500">Courses</a>
-        <a href="#" class="body-meduim-500">About</a>
-        <a href="#" class="body-meduim-500">Contact</a>
-        <a href="#" class="body-meduim-500">Became an istructor</a>
+        <a href="#" class="body-md-500 navLink">Home</a>
+        <a href="#" class="body-md-500 navLink">Courses</a>
+        <a href="#" class="body-md-500 navLink">About</a>
+        <a href="#" class="body-md-500 navLink">Contact</a>
+        <a href="#" class="body-md-500 navLink">Became an istructor</a>
       </div>
-      <div>
-        <div><span>USD</span>
+      <div class="langs body-md-400">
+        <div class="lang">
+          <span>USD</span>
           <img src="assets/CaretDown.png" alt="">
         </div>
-        <div><span>ENG</span>
+        <div class="lang">
+          <span>ENG</span>
           <img src="assets/CaretDown.png" alt="">
         </div>
       </div>
     </nav>
     <navbar>
-      <div>
+      <div class="flex gap-[50px] items-center">
         <img src="assets/LOGO-2.png" class="logo" alt="Logo">
-        <div>
-          <div class="body-large-400">
+        <div class="body-lg-400 forms">
+          <div class="Dropdown w-[200px]">
             Browse
             <img src="assets/CaretDown.png" alt="CaretDown">
           </div>
-          <div class="body-large-400">
+          <div class="left-icon w-[424px]">
             <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
-            What do you want learn...
+            <input 
+              type="text"
+              placeholder="What do you want learn..."
+              class="outline-none"
+            />
           </div>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="flex items-center gap-[24px]">
+        <div class="flex gap-[24px] cursor-pointer">
           <img src="assets/Bell.png" alt="Bell">
           <img src="assets/Heart.png" alt="Heart">
           <img src="assets/ShoppingCartSimple.png" alt="ShoppingCartSimple">
         </div>
-        <button class="btn-md btn-primary-primary">Create Account</button>
-        <button class="btn-md primary-primary">Sign In</button>
+        <div class="space-x-[12px]">
+          <button class="btn-md btn-secondary-primary">Create Account</button>
+          <button class="btn-md btn-primary-primary">Sign In</button>
+        </div>
       </div>
     </navbar>
     </div>
