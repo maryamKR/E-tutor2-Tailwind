@@ -10,8 +10,10 @@
     rel="stylesheet">
 </head>
   <style type="text/tailwindcss">
+    /**********************/
+        /* Colors */
+    /**********************/
     @theme {
-      /* ---- colors ----*/
       --color-gray-scale-900: #1D2026;
       --color-gray-scale-800: #363B47 ;
       --color-gray-scale-700: #4E5566;
@@ -143,11 +145,18 @@
 
     }
 
-  /* --- utility classes --- */
+  /* --- Utility Classes --- */
 
-    /* Global Font */
+    /* Base font */
     body { @apply font-inter }
     button, input, select, textarea { @apply font-inherit }
+
+    /* button base */
+    button { @apply transition-transform duration-300 ease-in-out cursor-pointer}
+
+    /**********************/
+        /* Typography */
+    /**********************/
 
     /* Typography of displays */
     .display1{ @apply text-D1 font-semibold tracking-[-2%]}
@@ -188,49 +197,111 @@
     .body-tiny-500{ @apply text-bdy-xs font-medium}
     .body-tiny-600{ @apply text-bdy-xs font-semibold}
 
-    /* Typography of Buttons */
-    .btn-sm { @apply text-bt-s font-semibold tracking-[-0.4%] capitalize }
-    .btn-md { @apply text-bt-m font-semibold tracking-[-0.8%] capitalize }
-    .btn-lg { @apply text-bt-lg font-semibold tracking-[-1%] capitalize }
+    /**********************/
+        /* Button */
+    /**********************/
 
-    /* Layout of Buttons */
-    .btn-sm-size { @apply px-[16px]} 
-    .btn-md-size { @apply px-[24px]}
-    .btn-lg-size { @apply px-[32px]}
+    /* Size */
+    .btn-sm { @apply text-bt-s font-semibold tracking-[-0.4%] capitalize px-[16px] }
+    .btn-md { @apply text-bt-m font-semibold tracking-[-0.8%] capitalize px-[24px] }
+    .btn-lg { @apply text-bt-lg font-semibold tracking-[-1%] capitalize px-[32px] }
 
-    /* Color of Buttons */
-    .btn-primary-primary { @apply bg-primary-500 hover:bg-primary-600 text-white transition-transform duration-300 ease-in-out }
+    /* Icons */
+    .btn-icon-right { @apply flex-row flex items-center gap-12 }
+    .btn-icon-left { @apply flex-row-reverse flex items-center gap-12 }
 
+    /* Primary/Primary */
+    .btn-primary-primary { @apply bg-primary-500 hover:bg-primary-600 text-white }
     .btn-primary-primary-disabled { @apply bg-primary-200 text-white}
 
-    .btn-primary-secondary { @apply bg-secondary-500 hover:bg-secondary-600 text-white transition-transform duration-300 ease-in-out }
-
+    /* Primary/Secondary */
+    .btn-primary-secondary { @apply bg-secondary-500 hover:bg-secondary-600 text-white }
     .btn-primary-secondary-disabled { @apply bg-secondary-200 text-white }
 
-    .btn-primary-gray { @apply bg-gray-scale-900 hover:bg-gray-scale-800 text-white transition-transform duration-300 ease-in-out }
-
+    /* Primary/Gray */
+    .btn-primary-gray { @apply bg-gray-scale-900 hover:bg-gray-scale-800 text-white }
     .btn-primary-gray-disabled { @apply bg-gray-scale-200 text-white }
 
-    .btn-primary-gray-2 { @apply bg-gray-scale-800 hover:bg-gray-scale-700 text-white transition-transform duration-300 ease-in-out }
+    .btn-primary-gray-2 { @apply bg-gray-scale-800 hover:bg-gray-scale-700 text-white }
 
-    .btn-secondary-primary { @apply bg-primary-100 hover:bg-primary-200 text-primary-500 hover:text-primary-600 transition-transform duration-300 ease-in-out }
-
+    /* Secondary/Primary */
+    .btn-secondary-primary { @apply bg-primary-100 hover:bg-primary-200 text-primary-500 hover:text-primary-600 }
     .btn-secondary-primary-disabled { @apply bg-primary-100 text-primary-300 }
 
-    .secondary-secondary { @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-500 hover:text-secondary-600 transition-transform duration-300 ease-in-out
+    /* Secondary/Secondary */
+    .secondary-secondary { @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-500 hover:text-secondary-600
     }
-    
     .secondary-secondary-disabled { @apply bg-primary-100 text-secondary-300}
 
-    .secondary-gray { @apply bg-gray-scale-50 hover:bg-gray-scale-100 text-gray-scale-900 hover:text-gray-scale-800 transition-transform duration-300 ease-in-out
+    /* Secondary/Gray */
+    .secondary-gray { @apply bg-gray-scale-50 hover:bg-gray-scale-100 text-gray-scale-900 hover:text-gray-scale-800
     }
-
     .btn-secondary-gray-disabled { @apply bg-gray-scale-50 text-gray-scale-300}
+
+    /* Tertiary/Primary */
+    .tertiary-primary { @apply bg-transparent hover:bg-primary-100 text-primary-500 hover:text-primary-600 px-[24px] }
+    .tertiary-primary-disabled { @apply  text-primary-300 }
+
+    /* Tertiary/Secondary */
+    .tertiary-secondary { @apply bg-transparent hover:bg-secondary-100 text-secondary-500 hover:text-secondary-600 px-[24px] }
+    .tertiary-secondary-disabled { @apply bg-transparent text-secondary-300 }
+
+    /* Tertiary/Gray */
+    .tertiary-gray { @apply bg-transparent hover:bg-gray-scale-50 text-gray-scale-900 px-[24px] }
+    .tertiary-gray-disabled { @apply bg-transparent text-gray-scale-300 }
+
+    /* Icon Buttons */
+    .icon-btn-primary-primary { @apply p-[12px] bg-primary-100 hover:bg-primary-500 text-primary-500 hover:text-white }
+    .icon-btn-primary-secondary { @apply p-[12px] bg-transparent hover:bg-primary-200 text-primary-500 }
+
+    .icon-btn-gray-scale-primary { @apply p-[12px] bg-gray-scale-50 hover:bg-gray-scale-900 text-gray-scale-900 hover:text-white }
+    .icon-btn-gray-scale-secondary { @apply p-[12px] bg-transparent hover:bg-gray-scale-100 text-gray-scale-900 }
+
+    .icon-btn-secondary-primary { @apply p-[12px] bg-secondary-100 hover:bg-secondary-500 text-secondary-500 hover:text-white }
+    .icon-btn-secondary-secondary { @apply p-[12px] bg-transparent hover:bg-secondary-200 text-secondary-500 }
+
+    .icon-btn-Success-primary { @apply p-[12px] bg-Success-100 hover:bg-Success-500 text-Success-500 hover:text-white }
+    .icon-btn-Success-secondary { @apply p-[12px] bg-transparent hover:bg-Success-200 text-Success-500 }
+
+    .icon-btn-Warning-primary { @apply p-[12px] bg-Warning-100 hover:bg-Warning-500 text-Warning-500 hover:text-white }
+    .icon-btn-Warning-secondary { @apply p-[12px] bg-transparent hover:bg-Warning-200 text-Warning-500 }
+
+    .icon-btn-Danger-primary { @apply p-[12px] bg-Danger-100 hover:bg-Danger-500 text-Danger-500 hover:text-white }
+    .icon-btn-Danger-secondary { @apply p-[12px] bg-transparent hover:bg-Danger-200 text-Danger-500 }
+
+    /* Simple Button */
+    .simple-btn-primary { @apply flex items-center gap-[8px] text-primary-500 border-b border-b-transparent hover:border-b-current py-[4px]}
+
+    .simple-btn-secondary { @apply flex items-center gap-[8px] text-secondary-500 border-b border-b-transparent hover:border-b-current py-[4px]}
+
+    .simple-btn-gray { @apply flex items-center gap-[8px] text-gray-scale-900 border-b border-b-transparent hover:border-b-current py-[4px]}
+
+    .simple-btn-Success { @apply flex items-center gap-[8px] text-Success-500 border-b border-b-transparent hover:border-b-current py-[4px]}
+
+    .simple-btn-Warning { @apply flex items-center gap-[8px] text-Warning-500 border-b border-b-transparent hover:border-b-current py-[4px]}
+
+    .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
+
 
   </style>
 <body>
   
-<button class="btn-primary-primary text-white">hello there</button>
+<button class="icon-btn-gray-scale-secondary">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+</button>
+
+<button class="simple-btn-secondary"> button
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<h1 class="underline display1">Hello</h1>
 
 </body>
 </html>
