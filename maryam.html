@@ -152,7 +152,7 @@
     button, input, select, textarea { @apply font-inherit }
 
     /* button base */
-    button { @apply transition duration-300 ease-in cursor-pointer}
+    button { @apply transition-all duration-300 ease-in cursor-pointer}
 
     /**********************/
         /* Typography */
@@ -297,9 +297,9 @@
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
-    .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition duration-300 ease-in}
+    .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition-all duration-300 ease-in}
     .langs { @apply flex gap-[24px] }
-    .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition duration-300 ease-in}
+    .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition-all duration-300 ease-in}
     /* navbar */
     navbar{ @apply flex justify-between px-[32px] py-[24px] border-b border-b-gray-scale-100}
     .forms{ @apply flex gap-[16px] }
@@ -308,10 +308,14 @@
     footer{@apply bg-gray-scale-900 text-white}
     .stat-item { @apply flex flex-col gap-[12px] max-w-[200px]}
 
-    .social-link { @apply w-[46px] h-[46px] bg-gray-scale-800 hover:bg-primary-500 p-[14px] flex items-center }
+    .social-link { @apply w-[46px] h-[46px] bg-gray-scale-800 hover:bg-primary-500 p-[14px] flex items-center transition-all duration-300}
 
-    .nav-link-footer { @apply text-gray-scale-300 hover:text-white border-b border-b-transparent hover:border-primary-500 }
+    .nav-link-footer { @apply text-gray-scale-300 py-[6px] hover:text-white border-b border-b-transparent hover:border-primary-500 w-fit transition-all duration-300}
+    .arrow { @apply inline-block ml-[12px]}
 
+    .btn-footer { @apply px-[20px] py-[12px] bg-gray-scale-800 hover:bg-gray-scale-700 flex gap-[14px] transition-all duration-300}
+
+    .footer-bottom { @apply py-[37px] border-t border-t-gray-scale-800}
     
 
 
@@ -418,51 +422,106 @@
         <div class="space-y-[20px]">
             <h4 class="label-lg">TOP 4 CATEGORY</h4>
             <ul class="space-y-[6px]">
-                <li class="nav-link-footer w-auto"><a class="body-md-400" href="#">Development</a></li>
-                <li><a class="body-md-400" href="#">Finance & Accounting</a></li>
-                <li><a class="body-md-400" href="#">Design</a></li>
-                <li><a class="body-md-400" href="#">Business</a></li>
+                <li class=" nav-link-footer">
+                  <a class="group body-md-400" href="#">Development
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Finance & Accounting
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Design
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Business
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
             </ul>
         </div>
         <div class="space-y-[20px]">
             <h4 class="label-lg">QUICK LINKS</h4>
             <ul class="space-y-[6px]">
-                <li><a class="body-md-400" href="#">About</a></li>
-                <li><a class="body-md-400" href="#" class="orange-link">Become Instructor &rarr;</a></li>
-                <li><a class="body-md-400" href="#">Contact</a></li>
-                <li><a class="body-md-400" href="#">Career</a></li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">About
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Become Instructor
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Contact
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Career
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
             </ul>
         </div>
 
         <div class="space-y-[20px]">
             <h4 class="label-lg">SUPPORT</h4>
             <ul class="space-y-[6px]">
-                <li><a class="body-md-400" href="#">Help Center</a></li>
-                <li><a class="body-md-400" href="#">FAQs</a></li>
-                <li><a class="body-md-400" href="#">Terms & Condition</a></li>
-                <li><a class="body-md-400" href="#">Privacy Policy</a></li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Help Center
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">FAQs
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Terms & Condition
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
+                <li class="nav-link-footer">
+                  <a class="group body-md-400" href="#">Privacy Policy
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                  </a>
+                </li>
             </ul>
         </div>
 
-        <div class="flex">
-            <div class="col-apps">
-              <h4 class="label-lg">DOWNLOAD OUR APP</h4>
-            <a href="#" class="app-card">
-                <img src="assets/apple 1.png" alt="Apple" class="app-icon">
-                <div class="app-text">
-                  <span class="body-tiny-400">Download now</span>
-                  <span class="body-large-500">App Store</span></div>
+        <div>
+            <h4 class="label-lg mb-[20px]">DOWNLOAD OUR APP</h4>
+            <a href="#" class="btn-footer mb-[12px]">
+                <img src="assets/apple 1.png" alt="Apple" class="">
+                <div class="flex flex-col gap-[2px]">
+                  <span class="body-tiny-400 text-gray-scale-300">Download now</span>
+                  <span class="body-lg-500">App Store</span>
+                </div>
             </a>
-            <a href="#" class="app-card">
-                <img src="assets/google-play-5 1.png" alt="Play" class="app-icon">
-                <div class="app-text">
-                  <span class="body-tiny-400">Download now</span> 
-                  <span class="body-large-500">Play Store</span></div>
+            <a href="#" class="btn-footer">
+                <img src="assets/google-play-5 1.png" alt="Play" class="">
+                <div class="flex flex-col gap-[2px]">
+                  <span class="body-tiny-400 text-gray-scale-300">Download now</span> 
+                  <span class="body-lg-500">Play Store</span>
+                </div>
             </a>
-            </div>
         </div>
     </div>
     
+    <div class="footer-bottom">
+        <p class="body-meduim-400">© 2021 - Eduflex. Designed by <strong class="stron">Templatecookie</strong>. All rights reserved</p>
+        <div class="lang-box form-normal">
+            <span>English</span>
+            <img src="images/ChevronDown.png" alt="">
+        </div>
+    </div>
     </div>
 </footer>
 
