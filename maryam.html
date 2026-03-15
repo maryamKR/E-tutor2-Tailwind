@@ -148,11 +148,11 @@
   /* --- Utility Classes --- */
 
     /* Base font */
-    body { @apply font-inter }
+    body { @apply font-inter text-gray-scale-900}
     button, input, select, textarea { @apply font-inherit }
 
     /* button base */
-    button { @apply transition-all duration-300 ease-in cursor-pointer}
+    button { @apply transition-all duration-200 ease-in cursor-pointer}
 
     /**********************/
         /* Typography */
@@ -282,11 +282,18 @@
 
     .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
 
+    /* Categorie */
+    .tag-primary-100 { @apply px-[6px] py-[4px] text-primary-700 bg-primary-100 }
+    .tag-secondary-100 { @apply px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
+    .tag-Success-100 { @apply px-[6px] py-[4px] text-Success-700 bg-Success-100 }
+    .tag-gray-100 { @apply px-[6px] py-[4px] text-gray-scale-50 bg-gray-scale-900 }
+
+
     /**********************/
       /* Form elements */
     /**********************/
 
-    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] outline hover:outline hover:outline-3 hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
+    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-3 hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
 
 
 
@@ -300,9 +307,9 @@
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
-    .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition-all duration-300 ease-in}
+    .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition-all duration-200 ease-in}
     .langs { @apply flex gap-[24px] }
-    .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition-all duration-300 ease-in}
+    .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition-all duration-200 ease-in}
     /* navbar */
     navbar{ @apply flex justify-between px-[32px] py-[24px] border-b border-b-gray-scale-100}
     .forms{ @apply flex gap-[16px] }
@@ -311,16 +318,23 @@
     footer{@apply bg-gray-scale-900 text-white}
     .stat-item { @apply flex flex-col gap-[12px] max-w-[200px]}
 
-    .social-link { @apply w-[46px] h-[46px] bg-gray-scale-800 hover:bg-primary-500 p-[14px] flex items-center transition-all duration-300}
+    .social-link { @apply w-[46px] h-[46px] bg-gray-scale-800 hover:bg-primary-500 p-[14px] flex items-center transition-all duration-200}
 
-    .nav-link-footer { @apply text-gray-scale-300 py-[6px] hover:text-white border-b border-b-transparent hover:border-primary-500 w-fit transition-all duration-300}
+    .nav-link-footer { @apply text-gray-scale-300 py-[6px] hover:text-white border-b border-b-transparent hover:border-primary-500 w-fit transition-all duration-200}
     .arrow { @apply inline-block ml-[12px]}
 
-    .btn-footer { @apply px-[20px] py-[12px] bg-gray-scale-800 hover:bg-gray-scale-700 flex gap-[14px] transition-all duration-300 w-fit}
+    .btn-footer { @apply px-[20px] py-[12px] bg-gray-scale-800 hover:bg-gray-scale-700 flex gap-[14px] transition-all duration-200 w-fit}
 
     .footer-bottom { @apply py-[37px] flex justify-between items-center border-t border-t-gray-scale-800 }
     
+    /* Best Selling Courses */
+    .course { @apply border border-gray-100}
+    .flex-between {@apply flex justify-between items-center}
+    .hr {@apply w-full h-[1px] bg-gray-100 block}
+    .rating {@apply flex gap-[4px] items-center}
+    .flex-center {@apply flex items-center}
 
+    .box { @apply space-y-[8px] py-[24px] text-center w-[200px] border border-gray-scale-100 cursor-pointer hover:shadow-xl transition-all duration-200 ease-in}
 
   </style>
 <body>
@@ -378,6 +392,173 @@
     </div>
   </header>
 
+  <main>
+    <section class="container">
+      <div class="pt-[100px] pb-[80px]">
+        <h2 class="heading2 text-center mb-[60px]">Best selling courses in Web Development</h2>
+        <div class="grid grid-cols-5 gap-[25px]">
+            <div class="course">
+              <img src="assets/Course Images.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">Design</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Machine Learning A-Z™: Hands-On Python & R In Data...</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div class="num-course">
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="course">
+              <img src="assets/Course Images-2.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-secondary-100 label-sm">Development</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Complete 2021 Web Development Bootcamp</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div class="num-course">
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course">
+              <img src="assets/Course Images-3.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-Success-100 label-sm">Business</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Learn Python Programming Masterclass</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div class="num-course">
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course">
+              <img src="assets/Course Images-4.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-secondary-100 label-sm">Marketing</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Complete Digital Marketing Course - 12 Courses in 1</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div class="num-course">
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course">
+              <img src="assets/Course Images-5.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">IT & Software</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Reiki Level I, II and Master/Teacher Program</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div class="num-course">
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="space-y-[24px]">
+        <div class="flex-between">
+          <h4 class="heading4">Popular tools</h4>
+
+          <div class="flex-center gap-[12px]">
+            <button class="text-gray-scale-500 hover:text-primary-500">
+              <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
+              <path d="M20.25 12H3.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+
+            <button class="text-gray-scale-500 hover:text-primary-500">
+              <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
+              <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex gap-[24px]">
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">HTML 5</p>
+            <p class="body-sm-400 text-gray-scale-500">2,736 Courses</p>
+          </div>
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">CSS 3</p>
+            <p class="body-sm-400 text-gray-scale-500">13,932 Courses</p>
+          </div>
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">Javascript</p>
+            <p class="body-sm-400 text-gray-scale-500">52,822 Courses</p>
+          </div>
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">Saas</p>
+            <p class="body-sm-400 text-gray-scale-500">20,126 Courses</p>
+          </div>
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">Laravel</p>
+            <p class="body-sm-400 text-gray-scale-500">6,196 Courses</p>
+          </div>
+          <div class="group box">
+            <p class="body-lg-500 group-hover:text-primary-500">Django</p>
+            <p class="body-sm-400 text-gray-scale-500">22,649 Courses</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-[40px] pb-[80px]">
+        hello
+      </div>
+    </section>
+  </main>
+
 
 <footer>
     <div class="container">
@@ -427,22 +608,22 @@
             <ul class="space-y-[6px]">
                 <li class=" nav-link-footer">
                   <a class="group body-md-400" href="#">Development
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Finance & Accounting
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Design
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Business
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
             </ul>
@@ -452,22 +633,22 @@
             <ul class="space-y-[6px]">
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">About
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Become Instructor
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Contact
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Career
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
             </ul>
@@ -478,22 +659,22 @@
             <ul class="space-y-[6px]">
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Help Center
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">FAQs
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Terms & Condition
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
                 <li class="nav-link-footer">
                   <a class="group body-md-400" href="#">Privacy Policy
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-300" src="assets/ArrowRight-white.png" alt="">
+                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
                   </a>
                 </li>
             </ul>
