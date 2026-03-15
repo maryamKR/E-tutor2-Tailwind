@@ -286,15 +286,13 @@
       /* Form elements */
     /**********************/
 
-    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] outline hover:outline hover:outline-3 hover:outline-primary-200 }
+    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] outline hover:outline hover:outline-3 hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
 
-    
 
-    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] focus:border-red-600 focus:outline-none; }
 
     .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-3 hover:outline-primary-200 }
 
-    .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent }
+    .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent focus:border-gray-scale-500 focus:text-gray-scale-500}
 
 
     .container { @apply w-full max-w-[1320px]  mx-auto px-[16px]}
@@ -351,10 +349,10 @@
       <div class="flex gap-[50px] items-center">
         <img src="assets/LOGO-2.png" class="logo" alt="Logo">
         <div class="body-lg-400 forms">
-          <div class="Dropdown w-[200px] outline">
+          <button class="Dropdown w-[200px]">
             Browse
             <img src="assets/CaretDown.png" alt="CaretDown">
-          </div>
+          </button>
           <div class="add-teacher w-[424px]">
             <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
             <input 
@@ -522,9 +520,11 @@
     
     <div class="footer-bottom">
         <p class="body-md-400 text-gray-scale-500">© 2021 - Eduflex. Designed by <strong class="text-white">Templatecookie</strong>. All rights reserved</p>
-        <div class="category">
-            <span class="body-lg-400">English</span>
+        <div class="body-lg-400">
+          <button class="group category">
+            English
             <img src="assets/ChevronDown.png" alt="">
+          </button>
         </div>
     </div>
     </div>
