@@ -109,7 +109,7 @@
       --text-lb-m: 12px;
         --text-lb-m--line-height: 12px;
       --text-lb-s: 10px;
-        --text-lb-s--line-height: 12px;
+        --text-lb-s--line-height: 10px;
 
       /* Body */
       --text-bdy-3xl: 24px;
@@ -293,11 +293,11 @@
       /* Form elements */
     /**********************/
 
-    .add-teacher { @apply border border-gray-scale-100 text-gray-scale-500 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-3 hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
+    .search-form { @apply border border-gray-scale-100 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-[3px] hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
 
 
 
-    .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-3 hover:outline-primary-200 }
+    .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-[3px] hover:outline-primary-200 }
 
     .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent focus:border-gray-scale-500 focus:text-gray-scale-500}
 
@@ -312,7 +312,7 @@
     .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition-all duration-200 ease-in}
     /* navbar */
     navbar{ @apply flex justify-between px-[32px] py-[24px] border-b border-b-gray-scale-100}
-    .forms{ @apply flex gap-[16px] }
+    .forms{ @apply flex items-center gap-[16px] }
 
     /*footer*/
     footer{@apply bg-gray-scale-900 text-white}
@@ -331,7 +331,7 @@
     .course { @apply border border-gray-100}
     .flex-between {@apply flex justify-between items-center}
     .hr {@apply w-full h-[1px] bg-gray-100 block}
-    .rating {@apply flex gap-[4px] items-center}
+    .rating {@apply flex gap-[4px] items-center text-gray-scale-700}
     .flex-center {@apply flex items-center}
 
     .box { @apply space-y-[8px] py-[24px] text-center w-[200px] border border-gray-scale-100 cursor-pointer hover:shadow-xl transition-all duration-200 ease-in}
@@ -373,12 +373,12 @@
             Browse
             <img src="assets/CaretDown.png" alt="CaretDown">
           </button>
-          <div class="add-teacher w-[424px]">
+          <div class="search-form w-[424px]">
             <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
             <input 
               type="text"
               placeholder="What do you want learn..."
-              class="outline-none"
+              class="outline-none placeholder-gray-scale-500"
             />
           </div>
         </div>
@@ -418,7 +418,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -440,7 +440,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -461,7 +461,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -482,7 +482,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -503,7 +503,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -593,7 +593,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -612,7 +612,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -631,7 +631,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -650,7 +650,7 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
@@ -669,11 +669,255 @@
                   <img src="assets/Star.png" alt="Star">
                   <span class="body-md-500">5.0</span>
                 </div>
-                <div class="num-students">
+                <div>
                   <span class="body-md-500 text-gray-scale-700">265.7K</span>
                   <span class="body-md-400 text-gray-scale-400"> students</span>
                 </div>
               </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-[80px]">
+      <div class="flex-between">
+        <div class="body-lg-400 forms">
+          <button class="btn-md border border-gray-scale-100 px-[24px] py-[12px] flex-between h-[48px] cursor-pointer hover:outline-3 hover:outline-primary-200 space-x-[24px]">
+              <span class="flex-center gap-[12px]">
+              <img src="assets/Faders.png" alt="Faders">
+              Browse
+            </span>
+            <span class="px-[6px] py-[4px] text-primary-500 bg-primary-100 body-sm-600">3</span>
+          </button>
+          <div class="search-form text-gray-scale-900 w-[457px]">
+            <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
+            <input
+              type="text"
+              class="placeholder-gray-scale-900 w-full outline-none"
+              placeholder="UI/UX Design"
+            />
+          </div>
+        </div>
+
+        <div class="forms">
+          <p class="body-md-400 text-color-gray-scale-700">Sort by:</p>
+          <button class="Dropdown body-lg-400 w-[200px]">
+            Trending
+            <img src="assets/CaretDown.png" alt="CaretDown">
+          </button>
+        </div>
+      </div>
+
+      <div class="flex-between">
+        <div class="flex gap-[12px] pt-[24px] pb-[16px]">
+          <p class="body-md-400">Suggestion:</p>
+          <p class="body-md-400 text-primary-500">user interface</p>
+          <p class="body-md-400 text-primary-500">user experience</p>
+          <p class="body-md-400 text-primary-500">web design</p>
+          <p class="body-md-400 text-primary-500">interface</p>
+          <p class="body-md-400 text-primary-500">app</p>
+        </div>
+        <p class="body-md-500">3,145,684<span class="body-md-500 text-gray-scale-700"> results find for “ui/ux design”</span></p>
+      </div>
+      <div class="hr"></div>
+      <div class="py-[40px] grid grid-cols-4 gap-[24px]">
+        <div class="course">
+              <img src="assets/Course Images-4.jpg" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">IT & Software</span>
+                  <span class="body-lg-500 text-primary-500">$35</span>
+                </div>
+                <p class="body-lg-500">Learn Python Programming Masterclass</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">4.0</span>
+                </div>
+                <div class="flex-center gap-[6px]">
+                  <img src="assets/User.png" alt="">
+                  <div>
+                    <span class="body-md-500 text-gray-scale-700">211,434</span>
+                    <span class="body-md-400 text-gray-scale-400"> students</span>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="course">
+              <img src="assets/Course Images-11.jpg" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">Design</span>
+                  <span class="body-lg-500 text-primary-500">$49</span>
+                </div>
+                <p class="body-lg-500">Complete Blender Creator: Learn 3D Modelling for Beginners</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">4.9</span>
+                </div>
+                <div class="flex-center gap-[6px]">
+                  <img src="assets/User.png" alt="">
+                  <span>
+                    <span class="body-md-500 text-gray-scale-700">197,637</span>
+                    <span class="body-md-400 text-gray-scale-400"> students</span>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="course">
+          <img src="assets/Course Images-7.jpg" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-secondary-100 label-sm">Developments</span>
+              <span class="body-lg-500 text-primary-500">$32</span>
+            </div>
+            <p class="body-lg-500">Adobe Premiere Pro CC – Advanced Training Course</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.6</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">236,568</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course">
+          <img src="assets/Course Images-6.jpg" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-secondary-100 label-sm">Marketing</span>
+              <span class="body-lg-500 text-primary-500">$13</span>
+            </div>
+            <p class="body-lg-500">Ultimate AWS Certified Solutions Architect Associate 2021</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.1</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">511,123</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course">
+              <img src="assets/Course Images-13.jpg" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">Design</span>
+                  <span class="body-lg-500 text-primary-500">$9</span>
+                </div>
+                <p class="body-lg-500">Ultimate Google Ads Training 2020: Profit with Pay Per Click</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">4.1</span>
+                </div>
+                <div class="flex-center gap-[6px]">
+                  <img src="assets/User.png" alt="">
+                  <div>
+                    <span class="body-md-500 text-gray-scale-700">154,817</span>
+                    <span class="body-md-400 text-gray-scale-400"> students</span>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="course">
+              <img src="assets/Course Images-8.jpg" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">IT & Software</span>
+                  <span class="body-lg-500 text-primary-500">$35</span>
+                </div>
+                <p class="body-lg-500">Learn Ethical Hacking From Scratch 2021</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">4.8</span>
+                </div>
+                <div class="flex-center gap-[6px]">
+                  <img src="assets/User.png" alt="">
+                  <span>
+                    <span class="body-md-500 text-gray-scale-700">451,444</span>
+                    <span class="body-md-400 text-gray-scale-400"> students</span>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="course">
+          <img src="assets/Course Images-14.jpg" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-secondary-100 label-sm">Developments</span>
+              <span class="body-lg-500 text-primary-500">$16</span>
+            </div>
+            <p class="body-lg-500">Angular - The Complete Guide (2021 Edition)</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.3</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">197,637</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course">
+          <img src="assets/Course Images-15.jpg" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-secondary-100 label-sm">Marketing</span>
+              <span class="body-lg-500 text-primary-500">$23</span>
+            </div>
+            <p class="body-lg-500">How to get Diamond in soloQ | League of Legends | Season 11</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.7</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">435,671</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
