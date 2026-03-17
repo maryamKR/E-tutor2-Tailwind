@@ -251,23 +251,23 @@
     .tertiary-gray-disabled { @apply bg-transparent text-gray-scale-300 }
 
     /* Icon Buttons */
-    .icon-btn-primary-primary { @apply inline-block p-[12px] bg-primary-100 hover:bg-primary-500 text-primary-500 hover:text-white }
-    .icon-btn-primary-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-primary-200 text-primary-500 }
+    .icon-btn-primary-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-primary-100 hover:bg-primary-500 text-primary-500 hover:text-white }
+    .icon-btn-primary-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 text-primary-500 }
 
-    .icon-btn-gray-scale-primary { @apply inline-block p-[12px] bg-gray-scale-50 hover:bg-gray-scale-900 text-gray-scale-900 hover:text-white }
-    .icon-btn-gray-scale-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-gray-scale-100 text-gray-scale-900 }
+    .icon-btn-gray-scale-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-gray-scale-50 hover:bg-gray-scale-900 text-gray-scale-900 hover:text-white }
+    .icon-btn-gray-scale-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-gray-scale-100 text-gray-scale-900 }
 
-    .icon-btn-secondary-primary { @apply inline-block p-[12px] bg-secondary-100 hover:bg-secondary-500 text-secondary-500 hover:text-white }
-    .icon-btn-secondary-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-secondary-200 text-secondary-500 }
+    .icon-btn-secondary-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-secondary-100 hover:bg-secondary-500 text-secondary-500 hover:text-white }
+    .icon-btn-secondary-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-secondary-200 text-secondary-500 }
 
-    .icon-btn-Success-primary { @apply inline-block p-[12px] bg-Success-100 hover:bg-Success-500 text-Success-500 hover:text-white }
-    .icon-btn-Success-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-Success-200 text-Success-500 }
+    .icon-btn-Success-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-Success-100 hover:bg-Success-500 text-Success-500 hover:text-white }
+    .icon-btn-Success-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-Success-200 text-Success-500 }
 
-    .icon-btn-Warning-primary { @apply inline-block p-[12px] bg-Warning-100 hover:bg-Warning-500 text-Warning-500 hover:text-white }
-    .icon-btn-Warning-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-Warning-200 text-Warning-500 }
+    .icon-btn-Warning-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-Warning-100 hover:bg-Warning-500 text-Warning-500 hover:text-white }
+    .icon-btn-Warning-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-Warning-200 text-Warning-500 }
 
-    .icon-btn-Danger-primary { @apply inline-block p-[12px] bg-Danger-100 hover:bg-Danger-500 text-Danger-500 hover:text-white} 
-    .icon-btn-Danger-secondary { @apply inline-block p-[12px] bg-transparent hover:bg-Danger-200 text-Danger-500 }
+    .icon-btn-Danger-primary { @apply w-[48px] h-[48px] flex items-center justify-center bg-Danger-100 hover:bg-Danger-500 text-Danger-500 hover:text-white} 
+    .icon-btn-Danger-secondary { @apply w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-Danger-200 text-Danger-500 }
 
     /* Simple Button */
     .simple-btn-primary { @apply flex items-center gap-[8px] text-primary-500 border-b border-b-transparent hover:border-b-current py-[4px]}
@@ -345,6 +345,9 @@
 
     /*Courses*/
     .img-course {@apply h-[234px] w-[312px] object-cover}
+    .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
+    .pagination-active { @apply bg-primary-500 text-white}
+
 
   </style>
 <body>
@@ -1328,26 +1331,26 @@
 
       </div>
 
-      <div class="flex-center gap-[16px]">
-        <div class="icon-btn-primary-secondary rounded-full">
+      <div class="flex-center justify-center gap-[16px]">
+        <button class="icon-btn-primary-secondary rounded-full">
           <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20.25 12H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
+        </button>
+        <div class="flex">
+          <span class="page pagination-active">1</span>
+          <span class="page">2</span>
+          <span class="page">3</span>
+          <span class="page">4</span>
+          <span class="page">5</span>
         </div>
-        <div class="inline-block">
-          <span class="icon-btn-primary-secondary rounded-full">1</span>
-          <span class="icon-btn-primary-secondary rounded-full">2</span>
-          <span class="icon-btn-primary-secondary rounded-full">3</span>
-          <span class="icon-btn-primary-secondary rounded-full">4</span>
-          <span class="icon-btn-primary-secondary rounded-full">5</span>
-        </div>
-        <div class="icon-btn-primary-secondary rounded-full">
+        <button class="icon-btn-primary-secondary rounded-full">
           <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </button>
       </div>
     </section>
   </main>
