@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
 </head>
-  <style type="text/tailwindcss">
-    /**********************/
+<style type="text/tailwindcss">
+  /**********************/
         /* Colors */
     /**********************/
     @theme {
@@ -295,15 +296,15 @@
 
     .search-form { @apply border border-gray-scale-100 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-[3px] hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
 
-
-
     .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-[3px] hover:outline-primary-200 }
 
     .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent focus:border-gray-scale-500 focus:text-gray-scale-500}
 
+     /**********************/
+      /* Classes */
+    /**********************/
 
     .container { @apply w-full max-w-[1320px]  mx-auto px-[16px]}
-
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
@@ -350,9 +351,10 @@
 
 
   </style>
+
 <body>
-  
-<header>
+  <!-- Header -->
+  <header>
     <nav>
       <div>
         <a href="#" class="body-md-500 navLink">Home</a>
@@ -382,11 +384,8 @@
           </button>
           <div class="search-form w-[424px]">
             <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
-            <input 
-              type="text"
-              placeholder="What do you want learn..."
-              class="outline-none placeholder-gray-scale-500"
-            />
+            <input type="text" placeholder="What do you want learn..."
+              class="outline-none placeholder-gray-scale-500" />
           </div>
         </div>
       </div>
@@ -406,116 +405,117 @@
   </header>
 
   <main>
+    <!-- Best selling section -->
     <section class="container">
       <div class="pt-[100px] pb-[80px]">
         <h2 class="heading2 text-center mb-[60px]">Best selling courses in Web Development</h2>
         <div class="grid grid-cols-5 gap-[25px]">
-            <div class="course">
-              <img src="assets/Course Images.png" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">Design</span>
-                  <span class="body-lg-500 text-primary-500">$57</span>
-                </div>
-                <p class="body-md-500">Machine Learning A-Z™: Hands-On Python & R In Data...</p>
+          <div class="course">
+            <img src="assets/Course Images.png" alt="" srcset="">
+            <div class="p-[14px] space-y-[10px]">
+              <div class="flex-between">
+                <span class="tag-primary-100 label-sm">Design</span>
+                <span class="body-lg-500 text-primary-500">$57</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+              <p class="body-md-500">Machine Learning A-Z™: Hands-On Python & R In Data...</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
 
+          </div>
+          <div class="course">
+            <img src="assets/Course Images-2.png" alt="" srcset="">
+            <div class="p-[14px] space-y-[10px]">
+              <div class="flex-between">
+                <span class="tag-secondary-100 label-sm">Development</span>
+                <span class="body-lg-500 text-primary-500">$57</span>
+              </div>
+              <p class="body-md-500">The Complete 2021 Web Development Bootcamp</p>
             </div>
-            <div class="course">
-              <img src="assets/Course Images-2.png" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-secondary-100 label-sm">Development</span>
-                  <span class="body-lg-500 text-primary-500">$57</span>
-                </div>
-                <p class="body-md-500">The Complete 2021 Web Development Bootcamp</p>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
-              </div>
-            </div>
-            <div class="course">
-              <img src="assets/Course Images-3.png" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-Success-100 label-sm">Business</span>
-                  <span class="body-lg-500 text-primary-500">$57</span>
-                </div>
-                <p class="body-md-500">Learn Python Programming Masterclass</p>
-              </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
               </div>
             </div>
-            <div class="course">
-              <img src="assets/Course Images-4.png" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-secondary-100 label-sm">Marketing</span>
-                  <span class="body-lg-500 text-primary-500">$57</span>
-                </div>
-                <p class="body-md-500">The Complete Digital Marketing Course - 12 Courses in 1</p>
+          </div>
+          <div class="course">
+            <img src="assets/Course Images-3.png" alt="" srcset="">
+            <div class="p-[14px] space-y-[10px]">
+              <div class="flex-between">
+                <span class="tag-Success-100 label-sm">Business</span>
+                <span class="body-lg-500 text-primary-500">$57</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+              <p class="body-md-500">Learn Python Programming Masterclass</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
               </div>
             </div>
-            <div class="course">
-              <img src="assets/Course Images-5.png" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">IT & Software</span>
-                  <span class="body-lg-500 text-primary-500">$57</span>
-                </div>
-                <p class="body-md-500">Reiki Level I, II and Master/Teacher Program</p>
+          </div>
+          <div class="course">
+            <img src="assets/Course Images-4.png" alt="" srcset="">
+            <div class="p-[14px] space-y-[10px]">
+              <div class="flex-between">
+                <span class="tag-secondary-100 label-sm">Marketing</span>
+                <span class="body-lg-500 text-primary-500">$57</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+              <p class="body-md-500">The Complete Digital Marketing Course - 12 Courses in 1</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
               </div>
             </div>
+          </div>
+          <div class="course">
+            <img src="assets/Course Images-5.png" alt="" srcset="">
+            <div class="p-[14px] space-y-[10px]">
+              <div class="flex-between">
+                <span class="tag-primary-100 label-sm">IT & Software</span>
+                <span class="body-lg-500 text-primary-500">$57</span>
+              </div>
+              <p class="body-md-500">Reiki Level I, II and Master/Teacher Program</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="space-y-[24px]">
@@ -524,17 +524,21 @@
 
           <div class="flex-center gap-[12px]">
             <button class="text-gray-scale-500 hover:text-primary-500">
-              <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
-              <path d="M20.25 12H3.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+              <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
+                <path d="M20.25 12H3.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </button>
 
             <button class="text-gray-scale-500 hover:text-primary-500">
-              <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
-              <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+              <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none">
+                <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </button>
           </div>
         </div>
@@ -578,11 +582,11 @@
           <div class="key body-md-500"><a href="#">Technology</a></div>
           <div class="key body-md-500"><a href="#">Wordpress</a></div>
         </div>
-        
+
 
       </div>
     </section>
-
+    <!-- instructor Section -->
     <section class="bg-gray-scale-50 py-[80px]">
       <div class="container space-y-[40px]">
         <h2 class="heading2 text-center">Popular instructor in Web Development</h2>
@@ -595,16 +599,16 @@
               <p class="text-gray-scale-500 body-md-400">Web Developer</p>
             </div>
             <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
           </div>
           <!--2-->
           <div class="instruc">
@@ -614,16 +618,16 @@
               <p class="text-gray-scale-500 body-md-400">React Native Developer</p>
             </div>
             <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
           </div>
           <!--3-->
           <div class="instruc">
@@ -633,16 +637,16 @@
               <p class="text-gray-scale-500 body-md-400">Mobile Developer</p>
             </div>
             <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
           </div>
           <!--4-->
           <div class="instruc">
@@ -652,16 +656,16 @@
               <p class="text-gray-scale-500 body-md-400">Javascript Developer</p>
             </div>
             <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
           </div>
           <!--5-->
           <div class="instruc">
@@ -671,26 +675,28 @@
               <p class="text-gray-scale-500 body-md-400">Lead Developer</p>
             </div>
             <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">5.0</span>
-                </div>
-                <div>
-                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
-                  <span class="body-md-400 text-gray-scale-400"> students</span>
-                </div>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
               </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Courses Section-->
     <section class="container py-[80px]">
       <div class="flex-between">
         <div class="body-lg-400 forms">
-          <button class="btn-md border border-gray-scale-100 px-[24px] py-[12px] flex-between h-[48px] cursor-pointer hover:outline-3 hover:outline-primary-200 space-x-[24px]">
-              <span class="flex-center gap-[12px]">
+          <button
+            class="btn-md border border-gray-scale-100 px-[24px] py-[12px] flex-between h-[48px] cursor-pointer hover:outline-3 hover:outline-primary-200 space-x-[24px]">
+            <span class="flex-center gap-[12px]">
               <img src="assets/Faders.png" alt="Faders">
               Browse
             </span>
@@ -698,11 +704,7 @@
           </button>
           <div class="search-form text-gray-scale-900 w-[457px]">
             <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
-            <input
-              type="text"
-              class="placeholder-gray-scale-900 w-full outline-none"
-              placeholder="UI/UX Design"
-            />
+            <input type="text" class="placeholder-gray-scale-900 w-full outline-none" placeholder="UI/UX Design" />
           </div>
         </div>
 
@@ -724,58 +726,59 @@
           <p class="body-md-400 text-primary-500">interface</p>
           <p class="body-md-400 text-primary-500">app</p>
         </div>
-        <p class="body-md-500">3,145,684<span class="body-md-500 text-gray-scale-700"> results find for “ui/ux design”</span></p>
+        <p class="body-md-500">3,145,684<span class="body-md-500 text-gray-scale-700"> results find for “ui/ux
+            design”</span></p>
       </div>
       <div class="hr"></div>
       <div class="py-[40px] grid grid-cols-4 gap-[24px]">
         <div class="course">
-              <img src="assets/Course Images-4.jpg" class="img-course" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">IT & Software</span>
-                  <span class="body-lg-500 text-primary-500">$35</span>
-                </div>
-                <p class="body-lg-500">Learn Python Programming Masterclass</p>
+          <img src="assets/Course Images-4.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">IT & Software</span>
+              <span class="body-lg-500 text-primary-500">$35</span>
+            </div>
+            <p class="body-lg-500">Learn Python Programming Masterclass</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.0</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <div>
+                <span class="body-md-500 text-gray-scale-700">211,434</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">4.0</span>
-                </div>
-                <div class="flex-center gap-[6px]">
-                  <img src="assets/User.png" alt="">
-                  <div>
-                    <span class="body-md-500 text-gray-scale-700">211,434</span>
-                    <span class="body-md-400 text-gray-scale-400"> students</span>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
         </div>
 
         <div class="course">
-              <img src="assets/Course Images-11.jpg" class="img-course" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">Design</span>
-                  <span class="body-lg-500 text-primary-500">$49</span>
-                </div>
-                <p class="body-lg-500">Complete Blender Creator: Learn 3D Modelling for Beginners</p>
-              </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">4.9</span>
-                </div>
-                <div class="flex-center gap-[6px]">
-                  <img src="assets/User.png" alt="">
-                  <span>
-                    <span class="body-md-500 text-gray-scale-700">197,637</span>
-                    <span class="body-md-400 text-gray-scale-400"> students</span>
-                  </span>
-                </div>
-              </div>
+          <img src="assets/Course Images-11.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">Design</span>
+              <span class="body-lg-500 text-primary-500">$49</span>
+            </div>
+            <p class="body-lg-500">Complete Blender Creator: Learn 3D Modelling for Beginners</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.9</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">197,637</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
         </div>
 
         <div class="course">
@@ -829,53 +832,53 @@
         </div>
 
         <div class="course">
-              <img src="assets/Course Images-13.jpg" class="img-course" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">Design</span>
-                  <span class="body-lg-500 text-primary-500">$9</span>
-                </div>
-                <p class="body-lg-500">Ultimate Google Ads Training 2020: Profit with Pay Per Click</p>
+          <img src="assets/Course Images-13.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">Design</span>
+              <span class="body-lg-500 text-primary-500">$9</span>
+            </div>
+            <p class="body-lg-500">Ultimate Google Ads Training 2020: Profit with Pay Per Click</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.1</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <div>
+                <span class="body-md-500 text-gray-scale-700">154,817</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
               </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">4.1</span>
-                </div>
-                <div class="flex-center gap-[6px]">
-                  <img src="assets/User.png" alt="">
-                  <div>
-                    <span class="body-md-500 text-gray-scale-700">154,817</span>
-                    <span class="body-md-400 text-gray-scale-400"> students</span>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
         </div>
 
         <div class="course">
-              <img src="assets/Course Images-8.jpg" class="img-course" alt="" srcset="">
-              <div class="p-[14px] space-y-[10px]">
-                <div class="flex-between">
-                  <span class="tag-primary-100 label-sm">IT & Software</span>
-                  <span class="body-lg-500 text-primary-500">$35</span>
-                </div>
-                <p class="body-lg-500">Learn Ethical Hacking From Scratch 2021</p>
-              </div>
-              <span class="hr"></span>
-              <div class="flex-between p-[14px]">
-                <div class="rating">
-                  <img src="assets/Star.png" alt="Star">
-                  <span class="body-md-500">4.8</span>
-                </div>
-                <div class="flex-center gap-[6px]">
-                  <img src="assets/User.png" alt="">
-                  <span>
-                    <span class="body-md-500 text-gray-scale-700">451,444</span>
-                    <span class="body-md-400 text-gray-scale-400"> students</span>
-                  </span>
-                </div>
-              </div>
+          <img src="assets/Course Images-8.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">IT & Software</span>
+              <span class="body-lg-500 text-primary-500">$35</span>
+            </div>
+            <p class="body-lg-500">Learn Ethical Hacking From Scratch 2021</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">4.8</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">451,444</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
         </div>
 
         <div class="course">
@@ -1334,51 +1337,55 @@
       <div class="flex-center justify-center gap-[16px]">
         <button class="icon-btn-primary-secondary rounded-full">
           <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.25 12H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.25 12H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
         <div class="flex">
-          <span class="page pagination-active">1</span>
-          <span class="page">2</span>
-          <span class="page">3</span>
-          <span class="page">4</span>
-          <span class="page">5</span>
+          <span class="page text-body-md-500 pagination-active">1</span>
+          <span class="page text-body-md-500">2</span>
+          <span class="page text-body-md-500">3</span>
+          <span class="page text-body-md-500">4</span>
+          <span class="page text-body-md-500">5</span>
         </div>
         <button class="icon-btn-primary-secondary rounded-full">
-          <svg  class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
       </div>
     </section>
   </main>
 
-
-<footer class="relative">
+  <!-- Footer -->
+  <footer class="relative">
     <div class="container">
       <div class="flex justify-between items-center py-[100px]">
         <div class="space-y-[32px]">
-            <h2 class="heading2">Start learning with 67.1k <br> students around the world.</h2>
-            <div class="space-x-[16px]">
-                <button class="btn-primary-primary btn-md">Join The Family</button>
-                <button class="btn-primary-gray-2 btn-md">Browse All Courses</button>
-            </div>
+          <h2 class="heading2">Start learning with 67.1k <br> students around the world.</h2>
+          <div class="space-x-[16px]">
+            <button class="btn-primary-primary btn-md">Join The Family</button>
+            <button class="btn-primary-gray-2 btn-md">Browse All Courses</button>
+          </div>
         </div>
         <div class="grid grid-cols-3 gap-[24px]">
-            <div class="stat-item">
-                <span class="heading2">6.3k</span>
-                <span class="body-lg-500 text-gray-scale-300">Online courses</span>
-            </div>
-            <div class="stat-item">
-                <span class="heading2">26k</span>
-                <span class="body-lg-500 text-gray-scale-300">Certified Instructor</span>
-            </div>
-            <div class="stat-item">
-                <span class="heading2">99.9%</span>
-                <span class="body-lg-500 text-gray-scale-300">Success Rate</span>
-            </div>
+          <div class="stat-item">
+            <span class="heading2">6.3k</span>
+            <span class="body-lg-500 text-gray-scale-300">Online courses</span>
+          </div>
+          <div class="stat-item">
+            <span class="heading2">26k</span>
+            <span class="body-lg-500 text-gray-scale-300">Certified Instructor</span>
+          </div>
+          <div class="stat-item">
+            <span class="heading2">99.9%</span>
+            <span class="body-lg-500 text-gray-scale-300">Success Rate</span>
+          </div>
         </div>
       </div>
 
@@ -1389,131 +1396,146 @@
 
       <div class="py-[80px] grid grid-cols-[424px_auto_auto_auto_auto]">
         <div class="space-y-[26px]">
-            <div class="space-y-[20px]">
-              <div class="logo-area">
-                <img src="assets/LOGO (5).png" alt="E-tutor Logo" class="brand-img">
-              </div>
-              <p class="body-md-400 text-gray-scale-300">Aliquam rhoncus ligula est, non pulvinar elit <br> convallis nec. Donec mattis odio at.</p>
+          <div class="space-y-[20px]">
+            <div class="logo-area">
+              <img src="assets/LOGO (5).png" alt="E-tutor Logo" class="brand-img">
             </div>
-            <div class="flex gap-[12px]">
-                <a href="#" class="social-link"><img src="assets/Frame 75.png" alt="fb"></a>
-                <a href="#" class="social-link"><img src="assets/Instragarm.png" alt="ig"></a>
-                <a href="#" class="social-link"><img src="assets/Linkedin.png" alt="in"></a>
-                <a href="#" class="social-link"><img src="assets/Twitter.png" alt="tw"></a>
-                <a href="#" class="social-link"><img src="assets/Youtube.png" alt="yt"></a>
-            </div>
+            <p class="body-md-400 text-gray-scale-300">Aliquam rhoncus ligula est, non pulvinar elit <br> convallis nec.
+              Donec mattis odio at.</p>
+          </div>
+          <div class="flex gap-[12px]">
+            <a href="#" class="social-link"><img src="assets/Frame 75.png" alt="fb"></a>
+            <a href="#" class="social-link"><img src="assets/Instragarm.png" alt="ig"></a>
+            <a href="#" class="social-link"><img src="assets/Linkedin.png" alt="in"></a>
+            <a href="#" class="social-link"><img src="assets/Twitter.png" alt="tw"></a>
+            <a href="#" class="social-link"><img src="assets/Youtube.png" alt="yt"></a>
+          </div>
         </div>
 
         <div class="space-y-[20px]">
-            <h4 class="label-lg">TOP 4 CATEGORY</h4>
-            <ul class="space-y-[6px]">
-                <li class=" nav-link-footer">
-                  <a class="group body-md-400" href="#">Development
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Finance & Accounting
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Design
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Business
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-            </ul>
+          <h4 class="label-lg">TOP 4 CATEGORY</h4>
+          <ul class="space-y-[6px]">
+            <li class=" nav-link-footer">
+              <a class="group body-md-400" href="#">Development
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Finance & Accounting
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Design
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Business
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="space-y-[20px]">
-            <h4 class="label-lg">QUICK LINKS</h4>
-            <ul class="space-y-[6px]">
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">About
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Become Instructor
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Contact
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Career
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-            </ul>
+          <h4 class="label-lg">QUICK LINKS</h4>
+          <ul class="space-y-[6px]">
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">About
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Become Instructor
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Contact
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Career
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="space-y-[20px]">
-            <h4 class="label-lg">SUPPORT</h4>
-            <ul class="space-y-[6px]">
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Help Center
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">FAQs
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Terms & Condition
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-                <li class="nav-link-footer">
-                  <a class="group body-md-400" href="#">Privacy Policy
-                    <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200" src="assets/ArrowRight-white.png" alt="">
-                  </a>
-                </li>
-            </ul>
+          <h4 class="label-lg">SUPPORT</h4>
+          <ul class="space-y-[6px]">
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Help Center
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">FAQs
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Terms & Condition
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+            <li class="nav-link-footer">
+              <a class="group body-md-400" href="#">Privacy Policy
+                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
+                  src="assets/ArrowRight-white.png" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div>
-            <h4 class="label-lg mb-[20px]">DOWNLOAD OUR APP</h4>
-            <a href="#" class="btn-footer mb-[12px]">
-                <img src="assets/apple 1.png" alt="Apple" class="">
-                <div class="flex flex-col gap-[2px]">
-                  <span class="body-tiny-400 text-gray-scale-300">Download now</span>
-                  <span class="body-lg-500">App Store</span>
-                </div>
-            </a>
-            <a href="#" class="btn-footer">
-                <img src="assets/google-play-5 1.png" alt="Play" class="">
-                <div class="flex flex-col gap-[2px]">
-                  <span class="body-tiny-400 text-gray-scale-300">Download now</span> 
-                  <span class="body-lg-500">Play Store</span>
-                </div>
-            </a>
+          <h4 class="label-lg mb-[20px]">DOWNLOAD OUR APP</h4>
+          <a href="#" class="btn-footer mb-[12px]">
+            <img src="assets/apple 1.png" alt="Apple" class="">
+            <div class="flex flex-col gap-[2px]">
+              <span class="body-tiny-400 text-gray-scale-300">Download now</span>
+              <span class="body-lg-500">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="btn-footer">
+            <img src="assets/google-play-5 1.png" alt="Play" class="">
+            <div class="flex flex-col gap-[2px]">
+              <span class="body-tiny-400 text-gray-scale-300">Download now</span>
+              <span class="body-lg-500">Play Store</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class=" before:content-[''] before:absolute before:left-0 before:right-0 
         before:w-[100%] before:h-[1px] before:bg-gray-scale-800"></div>
-    
+
       <div class="footer-bottom">
-          <p class="body-md-400 text-gray-scale-500">© 2021 - Eduflex. Designed by <strong class="text-white">Templatecookie</strong>. All rights reserved</p>
-          <div class="body-lg-400">
-            <button class="group category">
-              English
-              <img src="assets/ChevronDown.png" alt="">
-            </button>
-          </div>
+        <p class="body-md-400 text-gray-scale-500">© 2021 - Eduflex. Designed by <strong
+            class="text-white">Templatecookie</strong>. All rights reserved</p>
+        <div class="body-lg-400">
+          <button class="group category">
+            English
+            <img src="assets/ChevronDown.png" alt="">
+          </button>
+        </div>
       </div>
     </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
