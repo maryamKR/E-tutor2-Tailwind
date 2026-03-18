@@ -302,6 +302,9 @@
     /**********************/
 
     .container { @apply w-full max-w-[1320px]  mx-auto px-[16px]}
+    .flex-between {@apply flex justify-between items-center}
+    .flex-center {@apply flex items-center}
+    .hr {@apply w-full h-[1px] bg-gray-100 block}
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
@@ -326,25 +329,7 @@
     .footer-bottom { @apply py-[37px] flex justify-between items-center border-t border-t-gray-scale-800 }
     
     /* Best Selling Courses */
-    .course { @apply border border-gray-100}
-    .flex-between {@apply flex justify-between items-center}
-    .hr {@apply w-full h-[1px] bg-gray-100 block}
-    .rating {@apply flex gap-[4px] items-center text-gray-scale-700}
-    .flex-center {@apply flex items-center}
-
-    .box { @apply space-y-[8px] py-[24px] text-center w-[200px] border border-gray-scale-100 cursor-pointer hover:shadow-xl transition-all duration-200 ease-in}
-
-    .key { @apply px-[12px] py-[6px] bg-gray-scale-50 hover:bg-primary-500 hover:text-white transition-all duration-200 ease-in}
-
-    /*popular instructor Section*/
-    .instruc {@apply border border-gray-scale-100 bg-white}
-    .instruc-content { @apply px-[16px] py-[12px] space-y-[4px] text-center}
-
-
-    /*Courses*/
-    .img-course {@apply h-[234px] w-[312px] object-cover}
-    .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
-    .pagination-active { @apply bg-primary-500 text-white}
+    .box {@apply w-[200px] h-[100px] shadow-lg flex items-center justify-center}
 
 
   </style>
@@ -400,36 +385,45 @@
     </div>
   </header>
 
-<section>
-        <nav>
-            <p>2007-2021</p>
-        </nav>
-        <header>
-            <h1>We share knowledge with the world</h1>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent fermentum quam mauris. Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt at vitae nulla.</p>
-        </header>
-        <figure>
-            <img src="images/Images.png" alt="Team collaborating">
-            
-        </figure>
+  <main>
+    <div class="bg-gray-scale-50 py-[40px] text-center space-y-[16px]">
+      <h4 class="heading4">About</h4>
+      <div class="body-md-400">
+        <a href="" class="text-gray-scale-600">Home&nbsp;&nbsp;/&nbsp;&nbsp;</a>
+        <a href="">About</a>
+      </div>
+    </div>
+    <section class="container flex-between py-[80px]">
+      <div class="space-y-[32px]">
+        <div class="space-y-[16px]">
+          <p class="display1 text-gray-scale-100">2007-2021</p>
+          <h1 class="heading1">We share knowledge with the world</h1>
+        </div>
+        <p class="body-2xl-400 text-gray-scale-400">Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent fermentum quam mauris. Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt at vitae nulla.</p>
+      </div>
+    <figure>
+        <img src="assets/team.jpg" alt="Team collaborating">
+    </figure>
     </section>
-
-    <section>
-        <div>
-            <h2>We Just keep growing with 6.3k Companies</h2>
-            <p>Nullam egestas tellus at enim ornare tristique. Class aptent taciti sociosqu ad litora torquent.</p>
+<div class="hr"></div>
+    <section class="container py-[80px]">
+        <div class="flex-between">
+          <div class="space-y-[20px] max-w-[368px]">
+            <h3 class="heading3">We Just keep growing with 6.3k Companies</h3>
+            <p class="body-lg-400 text-gray-scale-600">Nullam egestas tellus at enim ornare tristique. Class aptent taciti sociosqu ad litora torquent.</p>
         </div>
 
-        <ul>
-            <li><img src="images/LOGO (2).png" alt="Netflix"></li>
-            <li><img src="images/LOGO (3).png" alt="YouTube"></li>
-            <li><img src="images/LOGO (4).png" alt="Google"></li>
-            <li><img src="images/LOGO (5).png" alt="Lenovo"></li>
-            <li><img src="images/LOGO (6).png" alt="Slack"></li>
-            <li><img src="images/LOGO (7).png" alt="Verizon"></li>
-            <li><img src="images/LOGO (8).png" alt="Lexmark"></li>
-            <li><img src="images/LOGO (9).png" alt="Microsoft"></li>
+        <ul class="grid grid-cols-4 gap-[24px]">
+            <li class="box"><img src="assets/netflex.png"  alt="Netflix"></li>
+            <li class="box"><img src="assets/youtub.png"  alt="YouTube"></li>
+            <li class="box"><img src="assets/googl.png"  alt="Google"></li>
+            <li class="box"><img src="assets/lenovo.png"  alt="Lenovo"></li>
+            <li class="box"><img src="assets/slack.png"  alt="Slack"></li>
+            <li class="box"><img src="assets/Company Logo.png"  alt="Verizon"></li>
+            <li class="box"><img src="assets/lexmark.png"  alt="Lexmark"></li>
+            <li class="box"><img src="assets/microsoft.png"  alt="Microsoft"></li>
         </ul>
+        </div>
 <aside>
     <div>
         <img src="images/Users.png" alt="users icon" width="24" height="24">
@@ -520,6 +514,7 @@
             <p>Chief Executive Officer of Netflix</p>
         </article>
     </section>
+  </main>
     <!-- Footer -->
   <footer class="relative">
     <div class="container">
