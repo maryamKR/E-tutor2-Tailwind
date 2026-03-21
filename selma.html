@@ -206,8 +206,8 @@
     .btn-lg { @apply text-bt-lg font-semibold tracking-[-1%] capitalize px-[32px] }
 
     /* Icons */
-    .btn-icon-right { @apply flex-row flex items-center gap-12 }
-    .btn-icon-left { @apply flex-row-reverse flex items-center gap-12 }
+    .btn-icon-right { @apply flex-row flex items-center gap-[12px] }
+    .btn-icon-left { @apply flex-row-reverse flex items-center gap-[12px] }
 
     /* Primary/Primary */
     .btn-primary-primary { @apply bg-primary-500 hover:bg-primary-600 text-white }
@@ -498,52 +498,91 @@
       </div>
     </section>
 
-    <section>
-      <div>
-        <p>OUR GALLERY</p>
-        <h2>We've been here almost 17 years</h2>
-        <p>Fusce lobortis leo augue, sit amet tristique nisi commodo in. Aliquam ac libero quis tellus venenatis
+    <section class="bg-gray-scale-50 py-[80px]">
+      <div class="container flex-between">
+        <div class="max-w-[424px]">
+        <p class="body-lg-500 text-primary-500 mb-[8px]">OUR GALLERY</p>
+        <div class="space-y-[24px]">
+          <h2 class="heading2">We've been here almost 17 years</h2>
+        <p class="body-lg-400 text-gray-scale-700">Fusce lobortis leo augue, sit amet tristique nisi commodo in. Aliquam ac libero quis tellus venenatis
           imperdiet. Sed sed nunc libero. Curabitur in urna ligula. Tanquam per conubia nostra.</p>
-        <button type="button">Join Our Team &rarr;</button>
+        <button class="btn-md btn-icon-right bg-primary-500 text-white">
+          <span>Join Our Team </span>
+          <img src="assets/ArrowRight-white.png" alt="">
+        </button>
+        </div>
       </div>
 
-      <div>
-        <img src="images/03 (1).png" alt="Office space">
-        <img src="images/05.png" alt="People working at laptops">
-        <img src="images/02 (1).png" alt="Person on phone">
-        <img src="images/01 (1).png" alt="Desk with plants">
-        <img src="images/04.png" alt="Team meeting">
-        <img src="images/07.png" alt="Discussion">
-        <img src="images/06.png" alt="Woman smiling">
+      <div class="flex gap-[20px] flex-col">
+        <div class="flex justify-center items-end gap-[24px]">
+          <img src="assets/gallery 1.jpg" alt="Office space" class="w-[280px] h-[200px] object-cover">
+          <img src="assets/gallery 2.jpg" alt="People working at laptops" class="w-[312px] h-[232px] object-cover">
+          <img src="assets/gallery 3.jpg" alt="Person on phone" class="w-[120px] h-[163px] object-cover">
+        </div>
+        <div class="flex gap-[24px]">
+          <img src="assets/gallery 4.jpg" alt="Desk with plants" class="w-[224px] h-[264px] object-cover">
+          <img src="assets/gallery 5.jpg" alt="Team meeting" class="w-[424px] h-[312px] object-cover">
+          <div class="flex flex-col gap-[24px]">
+            <img src="assets/gallery 6.jpg" alt="Discussion" class="w-[238px] h-[160px] object-cover">
+            <img src="assets/gallery 7.jpg" alt="Woman smiling" class="w-[124px] h-[128px] object-cover">
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
-    <section>
-      <article>
-        <blockquote>
-          Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes
-          them available to customers.
-        </blockquote>
-        <h3>Sundar Pichai</h3>
-        <p>Chief Chairman of Google</p>
-      </article>
+    <section class="container grid grid-cols-3 gap-[24px] py-[80px]">
+      <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes
+          them available to customers.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
+        </div>
+        <h3 class="body-lg-500 mb-[6px]">Sundar Pichai</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">Chief Chairman of </span> 
+          <span class="body-md-500 text-secondary-500">Google</span>
+        </p>
+      </div>
 
-      <article>
-        <blockquote>
-          Eduguard responds to the needs of the business in an agile and global manner. It’s truly the best solution for
-          our employees and their careers.
-        </blockquote>
-        <h3>Satya Nadella</h3>
-        <p>CEO of Microsoft</p>
-      </article>
+       <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">Edugaurd responds to the needs of the business in an agile and global manner. It’s truly the best solution for our employees and their careers.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
+        </div>
+        <h3 class="body-lg-500 mb-[6px]">Satya Nadella</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">CEO of </span> 
+          <span class="body-md-500 text-secondary-500">Microsoft</span>
+        </p>
+      </div>
 
-      <article>
-        <blockquote>
-          In total, it was a big success, I would get emails about what a fantastic resource it was.
-        </blockquote>
-        <h3>Ted Sarandos</h3>
-        <p>Chief Executive Officer of Netflix</p>
-      </article>
+       <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">In total, it was a big success, I would get emails about what a fantastic resource it was.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
+        </div>
+        <h3 class="body-lg-500 mb-[6px]">Ted Sarandos</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">Chief Executive Officer of </span> 
+          <span class="body-md-500 text-secondary-500">Netflix</span>
+        </p>
+      </div>
     </section>
   </main>
   <!-- Footer -->
