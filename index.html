@@ -108,7 +108,7 @@
       --text-lb-m: 12px;
         --text-lb-m--line-height: 12px;
       --text-lb-s: 10px;
-        --text-lb-s--line-height: 10px;
+        --text-lb-s--line-height: 12px;
 
       /* Body */
       --text-bdy-3xl: 24px;
@@ -152,6 +152,8 @@
 
     /* button base */
     button { @apply transition-all duration-200 ease-in cursor-pointer}
+
+    
 
     /**********************/
         /* Typography */
@@ -281,11 +283,13 @@
 
     .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
 
-    /* Categorie */
-    .tag-primary-100 { @apply px-[6px] py-[4px] text-primary-700 bg-primary-100 }
-    .tag-secondary-100 { @apply px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
-    .tag-Success-100 { @apply px-[6px] py-[4px] text-Success-700 bg-Success-100 }
-    .tag-gray-100 { @apply px-[6px] py-[4px] text-gray-scale-50 bg-gray-scale-900 }
+  
+     /* Categorie */
+    .tag-primary-100 { @apply h-[20px] px-[6px] py-[4px] text-primary-700 bg-primary-100 }
+    .tag-warning-100 { @apply h-[20px] px-[6px] py-[4px] text-Warning-700 bg-Warning-100 }
+    .tag-secondary-100 { @apply h-[20px] px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
+    .tag-Success-100 { @apply h-[20px] px-[6px] py-[4px] text-Success-700 bg-Success-100 }
+    .tag-gray-100 { @apply h-[20px] px-[6px] py-[4px] text-gray-scale-900 bg-gray-scale-100 }
 
 
     /**********************/
@@ -306,6 +310,9 @@
     .flex-between {@apply flex justify-between items-center}
     .flex-center {@apply flex items-center}
     .hr {@apply w-full h-[1px] bg-gray-100 block}
+
+    .border-gray {@apply border border-gray-scale-100}
+    .transition {@apply transition-all duration-200 ease-in}
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
@@ -329,7 +336,21 @@
 
     .footer-bottom { @apply py-[37px] flex justify-between items-center border-t border-t-gray-scale-800 }
     
-    
+    /* Category */
+    .box-cat {@apply flex items-center gap-[20px] py-[26px] px-[20px] hover:shadow-lg}
+    .back-icon {@apply w-[64px] h-[64px] flex items-center justify-center }
+
+     /* Best Selling Courses */
+    .course { @apply border border-gray-100}
+    .rating {@apply flex gap-[4px] items-center text-gray-scale-700}
+
+    /* Feature */
+    .feature {@apply border border-gray-scale-100 flex cursor-pointer transition-all duration-200 ease-in hover:shadow-lg}
+
+    /*Courses*/
+    .img-course {@apply h-[234px] w-[312px] object-cover}
+    .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
+    .pagination-active { @apply bg-primary-500 text-white}
   </style>
 
 <body>
@@ -397,7 +418,703 @@
       </div>
     </section>
 
- 
+     <section class="py-[80px] container space-y-[40px]">
+      <h2 class="heading2 text-center">Browse top category</h2>
+
+        <div class="grid grid-cols-4 gap-[24px]">
+
+        <div class="box-cat bg-secondary-100">
+          <div class="back-icon bg-white"><img src="assets/Cpu.png" alt=" logo" class="category-icon"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Label</h3>
+            <p class="body-md-400 text-gray-scale-600">63,476 Courses</p>
+          </div>
+        </div>
+
+         <div class="box-cat bg-Success-100">
+          <div class="back-icon bg-white"><img src="assets/Handshake.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Business</h3>
+            <p class="body-md-400 text-gray-scale-600">52,822 Courses</p>
+          </div>
+        </div>
+
+        <div class="box-cat bg-Warning-100">
+          <div class="back-icon bg-white"><img src="assets/CreditCard.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Finance & Accounting</h3>
+            <p class="body-md-400 text-gray-scale-600">33,841 Courses</p>
+          </div>
+        </div>
+
+        <div class="box-cat bg-Danger-100">
+          <div class="back-icon bg-white"><img src="assets/ChartBarHorizontal.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">IT & Software</h3>
+            <p class="body-md-400 text-gray-scale-600">22,649 Courses</p>
+          </div>
+        </div>
+
+        <div class="box-cat bg-Warning-100">
+          <div class="back-icon bg-primary-500"><img src="assets/BugDroid.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Personal Development</h3>
+            <p class="body-md-400 text-gray-scale-600">20,126 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-gray-scale-50">
+          <div class="back-icon bg-white"><img src="assets/Receipt.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Office Productivity</h3>
+            <p class="body-md-400 text-gray-scale-600">13,932 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-secondary-100">
+          <div class="back-icon bg-white"><img src="assets/MegaphoneSimple.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Marketing</h3>
+            <p class="body-md-400 text-gray-scale-600">12,068 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-gray-scale-50">
+          <div class="back-icon bg-white"><img src="assets/Camera.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Photography & Video</h3>
+            <p class="body-md-400 text-gray-scale-600">6,196 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-Warning-100">
+          <div class="back-icon bg-white"><img src="assets/Package.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Lifestyle</h3>
+            <p class="body-md-400 text-gray-scale-600">2,736 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-primary-100">
+          <div class="back-icon bg-white"><img src="assets/PenNib.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Design</h3>
+            <p class="body-md-400 text-gray-scale-600">2,600 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="box-cat bg-Success-100">
+          <div class="back-icon bg-white"><img src="assets/FirstAidKit.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Health & Fitness</h3>
+            <p class="body-md-400 text-gray-scale-600">1,678 Courses</p>
+          </div>
+        </div>
+
+        <div class="box-cat bg-Warning-100">
+          <div class="back-icon bg-white"><img src="assets/Headphones.png" alt="logo"></div>
+          <div class="info space-y-[8px]">
+            <h3 class="body-lg-500">Music</h3>
+            <p class="body-md-400 text-gray-scale-600">959 Courses</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-[12px]">
+        <p class="body-md-400 text-gray-scale-700">We have more category & subcategory.</p>
+        <a href="#" class="simple-btn-primary body-md-500">Browse All <img src="assets/ArrowRight.png" alt=""></a>
+      </div>
+    </section>
+
+    <!-- Best selling section -->
+    <section class="-space-y-[253px]">
+      <div class="bg-gray-scale-50 h-[1179px]">
+        <div class="container pt-[80px]">
+          <h2 class="heading2 text-center mb-[60px]">Best selling courses</h2>
+          <div class="grid grid-cols-5 gap-[25px]">
+            <div class="course bg-white">
+              <img src="assets/Course Images.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">Design</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Machine Learning A-Z™: Hands-On Python & R In Data...</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-2.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-secondary-100 label-sm">Development</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Complete 2021 Web Development Bootcamp</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-3.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-Success-100 label-sm">Business</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Learn Python Programming Masterclass</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-4.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-secondary-100 label-sm">Marketing</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Complete Digital Marketing Course - 12 Courses in 1</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-5.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">IT & Software</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Reiki Level I, II and Master/Teacher Program</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-6.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-warning-100 label-sm">Music</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Complete Foundation Stock Trading Course</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-7.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-secondary-100 label-sm">Marketing</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Beginner to Pro in Excel: Financial Modeling and Valuati...</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-8.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-Success-100 label-sm">Health & Fitness</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">The Python Mega Course: Build 10 Real World Applications</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-9.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-primary-100 label-sm">DESIGN</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Copywriting - Become a Freelance Copywriter, your ow...</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+            <div class="course bg-white">
+              <img src="assets/Course Images-10.png" alt="" srcset="">
+              <div class="p-[14px] space-y-[10px]">
+                <div class="flex-between">
+                  <span class="tag-warning-100 label-sm">Lifestyle</span>
+                  <span class="body-lg-500 text-primary-500">$57</span>
+                </div>
+                <p class="body-md-500">Google Analytics Certification - Learn How To Pass The Exam</p>
+              </div>
+              <span class="hr"></span>
+              <div class="flex-between p-[14px]">
+                <div class="rating">
+                  <img src="assets/Star.png" alt="Star">
+                  <span class="body-md-500">5.0</span>
+                </div>
+                <div>
+                  <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                  <span class="body-md-400 text-gray-scale-400"> students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="max-w-[1480px] mx-auto bg-white border-gray px-[80px] pt-[82px] pb-[80px]">
+        <div class="container space-y-[40px]">
+          <div class="flex-between">
+            <h2 class="heading2">Our feature courses</h2>
+            <p class="body-md-400 text-gray-700 max-w-[424px]">Vestibulum sed dolor sed diam mollis maximus vel nec dolor. Donec varius purus et eleifend porta.</p>
+          </div>
+          
+            <div class="grid grid-cols-2 gap-x-[24px] gap-y-[26px]">
+              <div class="feature group">
+                <img src="assets/Course Images-4.png" class="w-[220px] h-auto" alt="">
+                <div class="py-[16px] space-y-[17px]">
+                  <div class="px-[24px] space-y-[8px]">
+                    <div class="flex-between">
+                      <span class="tag-Success-100 label-sm">Health & Fitness</span>
+                      <div>
+                        <span class="body-xl-400">$14.00</span>
+                        <span class="body-md-400 text-gray-scale-400 line-through"> $26.00</span>
+                      </div>
+                    </div>
+                    <p class="body-lg-500 group-hover:text-primary-500 transition">Investing In Stocks The Complete Course! (13 H...</p>
+                  </div>
+                  <div class="px-[20px] flex-between">
+                    <div class="flex-center gap-[12px]">
+                      <img src="assets/kevin.jpg" class="w-[28px] rounded-full" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex-center gap-[5px]">
+                      <img src="assets/Star.png" alt="">
+                      <span class="body-md-500">5.0</span><span class="body-md-500 text-gray-scale-500"> (357,914)</span>
+                      
+                    </div>
+                  </div>
+                  <div class="hr"></div>
+                  <div class="flex-between px-[20px] body-meduim-400">
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/User.png" alt="">
+                      <span class="text-gray-scale-700 body-md-500">265.7K</span>
+                      <span class="text-gray-scale-500 body-md-400"> students</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/bar-chart.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Beginner</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/Clock.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">6 hour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature group">
+                <img src="assets/Course Images-5.png" class="w-[220px] h-auto" alt="">
+                <div class="py-[16px] space-y-[17px]">
+                  <div class="px-[24px] space-y-[8px]">
+                    <div class="flex-between">
+                      <span class="tag-primary-100 label-sm">Personal Development</span>
+                      <div>
+                        <span class="body-xl-400">$14.00</span>
+                        <span class="body-md-400 text-gray-scale-400 line-through"> $26.00</span>
+                      </div>
+                    </div>
+                    <p class="body-lg-500 group-hover:text-primary-500 transition">Google Analytics Certification - Learn How To...</p>
+                  </div>
+                  <div class="px-[20px] flex-between">
+                    <div class="flex-center gap-[12px]">
+                      <img src="assets/kevin.jpg" class="w-[28px] rounded-full" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex-center gap-[5px]">
+                      <img src="assets/Star.png" alt="">
+                      <span class="body-md-500">5.0</span><span class="body-md-500 text-gray-scale-500"> (357,914)</span>
+                      
+                    </div>
+                  </div>
+                  <div class="hr"></div>
+                  <div class="flex-between px-[20px] body-meduim-400">
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/User.png" alt="">
+                      <span class="text-gray-scale-700 body-md-500">265.7K</span>
+                      <span class="text-gray-scale-500 body-md-400"> students</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/bar-chart.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Beginner</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/Clock.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">6 hour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature group">
+                <img src="assets/Course Images-9.png" class="w-[220px] h-auto" alt="">
+                <div class="py-[16px] space-y-[17px]">
+                  <div class="px-[24px] space-y-[8px]">
+                    <div class="flex-between">
+                      <span class="tag-gray-100 label-sm">Productivity</span>
+                      <div>
+                        <span class="body-xl-400">$14.00</span>
+                        <span class="body-md-400 text-gray-scale-400 line-through"> $26.00</span>
+                      </div>
+                    </div>
+                    <p class="body-lg-500 group-hover:text-primary-500 transition">Adobe XD for Web Design: Essential Principles</p>
+                  </div>
+                  <div class="px-[20px] flex-between">
+                    <div class="flex-center gap-[12px]">
+                      <img src="assets/kevin.jpg" class="w-[28px] rounded-full" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex-center gap-[5px]">
+                      <img src="assets/Star.png" alt="">
+                      <span class="body-md-500">5.0</span><span class="body-md-500 text-gray-scale-500"> (357,914)</span>
+                      
+                    </div>
+                  </div>
+                  <div class="hr"></div>
+                  <div class="flex-between px-[20px] body-meduim-400">
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/User.png" alt="">
+                      <span class="text-gray-scale-700 body-md-500">265.7K</span>
+                      <span class="text-gray-scale-500 body-md-400"> students</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/bar-chart.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Beginner</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/Clock.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">6 hour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature group">
+                <img src="assets/Course Images-7.png" class="w-[220px] h-auto" alt="">
+                <div class="py-[16px] space-y-[17px]">
+                  <div class="px-[24px] space-y-[8px]">
+                    <div class="flex-between">
+                      <span class="tag-warning-100 label-sm">Health & Fitness</span>
+                      <div>
+                        <span class="body-xl-400">$14.00</span>
+                        <span class="body-md-400 text-gray-scale-400 line-through"> $26.00</span>
+                      </div>
+                    </div>
+                    <p class="body-lg-500 group-hover:text-primary-500 transition">Investing In Stocks The Complete Course! (13 H...</p>
+                  </div>
+                  <div class="px-[20px] flex-between">
+                    <div class="flex-center gap-[12px]">
+                      <img src="assets/kevin.jpg" class="w-[28px] rounded-full" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Kevin Gilbert</span>
+                    </div>
+
+                    <div class="flex-center gap-[5px]">
+                      <img src="assets/Star.png" alt="">
+                      <span class="body-md-500">5.0</span><span class="body-md-500 text-gray-scale-500"> (357,914)</span>
+                      
+                    </div>
+                  </div>
+                  <div class="hr"></div>
+                  <div class="flex-between px-[20px] body-meduim-400">
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/User.png" alt="">
+                      <span class="text-gray-scale-700 body-md-500">265.7K</span>
+                      <span class="text-gray-scale-500 body-md-400"> students</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/bar-chart.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">Beginner</span>
+                    </div>
+
+                    <div class="flex-center gap-[6px]">
+                      <img src="assets/Clock.png" alt="">
+                      <span class="body-md-400 text-gray-scale-700">6 hour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    </section>
+
+    <section class="container py-[80px] space-y-[40px]">
+      <h2 class="heading2 text-center">Recently added courses</h2>
+      <div class="grid grid-cols-4 gap-[24px]">
+        <div class="course">
+          <img src="assets/recently.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">Design</span>
+              <span class="body-lg-500 text-primary-500">$57</span>
+            </div>
+            <p class="body-lg-500">The Python Mega Course: Build 10 Real World Applications</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">5.0</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+      </div>
+
+      <div class="course">
+          <img src="assets/Course Images-5.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-warning-100 label-sm">IT & Software</span>
+              <span class="body-lg-500 text-primary-500">$57</span>
+            </div>
+            <p class="body-lg-500">Facebook Ads & Facebook Marketing MASTERY 2021 Cours...</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">5.0</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+      </div>
+
+      <div class="course">
+          <img src="assets/Course Images-13.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-secondary-100 label-sm">Developments</span>
+              <span class="body-lg-500 text-primary-500">$57</span>
+            </div>
+            <p class="body-lg-500">2021 Complete Python Bootcamp From Zero to Hero in Python</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">5.0</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="course">
+          <img src="assets/4.jpg" class="img-course" alt="" srcset="">
+          <div class="p-[14px] space-y-[10px]">
+            <div class="flex-between">
+              <span class="tag-primary-100 label-sm">Marketing</span>
+              <span class="body-lg-500 text-primary-500">$57</span>
+            </div>
+            <p class="body-lg-500">How to get Diamond in soloQ | League of Legends | Season 11</p>
+          </div>
+          <span class="hr"></span>
+          <div class="flex-between p-[14px]">
+            <div class="rating">
+              <img src="assets/Star.png" alt="Star">
+              <span class="body-md-500">5.0</span>
+            </div>
+            <div class="flex-center gap-[6px]">
+              <img src="assets/User.png" alt="">
+              <span>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center"><button class="btn-md btn-icon-right btn-secondary-primary">
+        <span>Browse all Course</span>
+        <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button></div>
+    </section>
+
+    <section class="bg-gray-scale-50 pt-[80.5px]">
+      <div class="container">
+        <div class="grid grid-cols-2">
+          <div class="bg-gradient-to-r from-primary-600 to-primary-500">
+                <div class="flex-between px-[40px] pt-[40px]">
+                  <div class="text-white flex flex-center">
+                    <div class="">
+                      <h3 class="heading3 mb-[12px]">Become an instructor</h3>
+                    <p class="body-md-400 mb-[24px]">Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
+                    <button class="btn-md btn-icon-right btn-secondary-primary">
+                    <span>Start teaching</span>
+                    <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                    </div>
+                    
+                </div>
+                
+              <img src="assets/Become an Instructor.png" alt="Instructor"> 
+                </div>
+          
+        </div>
+
+        <div class="bg-white px-[40px] flex items-center">
+          <div>
+            <h3 class="heading3 mb-[27px]">Your teaching & earning steps</h3>
+          <div class="grid grid-cols-2 gap-[20px] items-center">
+            <div class="flex-center gap-[16px]">
+              <span class="icon-btn-secondary-primary rounded-full body-xxl-600">1</span>
+              <span class="body-lg-400">Apply to become instructor</span>
+            </div>
+
+            <div class="flex-center gap-[16px]">
+              <span class="icon-btn-primary-primary rounded-full body-xxl-600">2</span>
+              <span class="body-lg-400">Build & edit your profile</span>
+            </div>
+
+            <div class="flex-center gap-[16px]">
+              <span class="icon-btn-Danger-primary rounded-full body-xxl-600">3</span>
+              <span class="body-lg-400">Create your new course</span>
+            </div>
+
+            <div class="flex-center gap-[16px]">
+              <span class="icon-btn-Success-primary rounded-full body-xxl-600">4</span>
+              <span class="body-lg-400">Start teaching & earning</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- Footer -->
   <footer class="relative">
