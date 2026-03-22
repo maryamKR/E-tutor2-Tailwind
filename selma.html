@@ -282,10 +282,11 @@
     .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
 
     /* Categorie */
-    .tag-primary-100 { @apply px-[6px] py-[4px] text-primary-700 bg-primary-100 }
-    .tag-secondary-100 { @apply px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
-    .tag-Success-100 { @apply px-[6px] py-[4px] text-Success-700 bg-Success-100 }
-    .tag-gray-100 { @apply px-[6px] py-[4px] text-gray-scale-50 bg-gray-scale-900 }
+    .tag-primary-100 { @apply h-[20px] px-[6px] py-[4px] text-primary-700 bg-primary-100 }
+    .tag-warning-100 { @apply h-[20px] px-[6px] py-[4px] text-Warning-700 bg-Warning-100 }
+    .tag-secondary-100 { @apply h-[20px] px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
+    .tag-Success-100 { @apply h-[20px] px-[6px] py-[4px] text-Success-700 bg-Success-100 }
+    .tag-gray-100 { @apply h-[20px] px-[6px] py-[4px] text-gray-scale-900 bg-gray-scale-100 }
 
 
     /**********************/
@@ -306,6 +307,9 @@
     .flex-between {@apply flex justify-between items-center}
     .flex-center {@apply flex items-center}
     .hr {@apply w-full h-[1px] bg-gray-100 block}
+
+    .border-gray {@apply border border-gray-scale-100}
+    .transition {@apply transition-all duration-200 ease-in}
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
