@@ -351,6 +351,13 @@
     .img-course {@apply h-[234px] w-[312px] object-cover}
     .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
     .pagination-active { @apply bg-primary-500 text-white}
+
+    /*popular instructor Section*/
+    .instruc {@apply border border-gray-scale-100 bg-white}
+    .instruc-content { @apply px-[16px] py-[12px] space-y-[4px] text-center}
+
+    /* companies */
+    .box {@apply w-[200px] h-[100px] shadow-lg flex items-center justify-center}
   </style>
 
 <body>
@@ -753,7 +760,7 @@
         </div>
       </div>
 
-        <div class="max-w-[1480px] mx-auto bg-white border-gray px-[80px] pt-[82px] pb-[80px]">
+        <div class="max-w-[1480px] mx-auto bg-white border-gray px-[80px] py-[80px]">
         <div class="container space-y-[40px]">
           <div class="flex-between">
             <h2 class="heading2">Our feature courses</h2>
@@ -1053,18 +1060,21 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-center"><button class="btn-md btn-icon-right btn-secondary-primary">
+      <div class="flex justify-center">
+        <button class="btn-md btn-icon-right btn-secondary-primary">
         <span>Browse all Course</span>
         <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </button></div>
+        </button>
+      </div>
     </section>
 
-    <section class="bg-gray-scale-50 pt-[80.5px]">
-      <div class="">
-        <div class="grid grid-cols-2">
+    <section class="-space-y-[229px]"> 
+      <div class="bg-gray-scale-50 h-[671px]">
+        <div class="container pt-[80.5px]">
+        <div class="grid grid-cols-2 gap-[24px]">
           <div class="bg-gradient-to-r from-primary-600 to-primary-500">
                 <div class="flex-between px-[40px] pt-[40px]">
                   <div class="text-white flex flex-center">
@@ -1114,7 +1124,118 @@
           </div>
         </div>
       </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1480px] mx-auto bg-white border-gray px-[80px] py-[80px]">
+        <div class="container space-y-[40px]">
+        <h2 class="heading2 text-center">Top instructor of the month</h2>
+        <div class="grid grid-cols-5 gap-[25px]">
+          <!--1-->
+          <div class="instruc">
+            <img src="assets/i-1.jpg" alt="">
+            <div class="instruc-content">
+              <p class="body-lg-500">Devon Lane</p>
+              <p class="text-gray-scale-500 body-md-400">Web Developer</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+          <!--2-->
+          <div class="instruc">
+            <img src="assets/i-2.jpg" alt="">
+            <div class="instruc-content">
+              <p class="body-lg-500">Darrell Steward</p>
+              <p class="text-gray-scale-500 body-md-400">React Native Developer</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+          <!--3-->
+          <div class="instruc">
+            <img src="assets/i-3.jpg" alt="">
+            <div class="instruc-content">
+              <p class="body-lg-500">Jane Cooper</p>
+              <p class="text-gray-scale-500 body-md-400">Mobile Developer</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+          <!--4-->
+          <div class="instruc">
+            <img src="assets/i-4.jpg" alt="">
+            <div class="instruc-content">
+              <p class="body-lg-500">Albert Flores</p>
+              <p class="text-gray-scale-500 body-md-400">Javascript Developer</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+          <!--5-->
+          <div class="instruc">
+            <img src="assets/i-5.jpg" alt="">
+            <div class="instruc-content">
+              <p class="body-lg-500">Kathryn Murphy</p>
+              <p class="text-gray-scale-500 body-md-400">Lead Developer</p>
+            </div>
+            <span class="hr"></span>
+            <div class="flex-between p-[14px]">
+              <div class="rating">
+                <img src="assets/Star.png" alt="Star">
+                <span class="body-md-500">5.0</span>
+              </div>
+              <div>
+                <span class="body-md-500 text-gray-scale-700">265.7K</span>
+                <span class="body-md-400 text-gray-scale-400"> students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-[12px]">
+        <p class="body-md-400 text-gray-scale-700">Thousands of students waiting for a instructor. Start teaching & earning now!.</p>
+        <a href="#" class="simple-btn-primary body-md-500">Become Instructor <img src="assets/ArrowRight.png" alt=""></a>
+      </div>
+      </div>
+      </div>
     </section>
+
+    
   </main>
   <!-- Footer -->
   <footer class="relative">
