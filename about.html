@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <style type="text/tailwindcss">
   /**********************/
         /* Colors */
@@ -204,8 +206,8 @@
     .btn-lg { @apply text-bt-lg font-semibold tracking-[-1%] capitalize px-[32px] }
 
     /* Icons */
-    .btn-icon-right { @apply flex-row flex items-center gap-12 }
-    .btn-icon-left { @apply flex-row-reverse flex items-center gap-12 }
+    .btn-icon-right { @apply flex-row flex items-center gap-[12px] }
+    .btn-icon-left { @apply flex-row-reverse flex items-center gap-[12px] }
 
     /* Primary/Primary */
     .btn-primary-primary { @apply bg-primary-500 hover:bg-primary-600 text-white }
@@ -280,10 +282,11 @@
     .simple-btn-Danger { @apply flex items-center gap-[8px] text-Danger-500 border-b border-b-transparent hover:border-b-current py-[4px]}
 
     /* Categorie */
-    .tag-primary-100 { @apply px-[6px] py-[4px] text-primary-700 bg-primary-100 }
-    .tag-secondary-100 { @apply px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
-    .tag-Success-100 { @apply px-[6px] py-[4px] text-Success-700 bg-Success-100 }
-    .tag-gray-100 { @apply px-[6px] py-[4px] text-gray-scale-50 bg-gray-scale-900 }
+    .tag-primary-100 { @apply h-[20px] px-[6px] py-[4px] text-primary-700 bg-primary-100 }
+    .tag-warning-100 { @apply h-[20px] px-[6px] py-[4px] text-Warning-700 bg-Warning-100 }
+    .tag-secondary-100 { @apply h-[20px] px-[6px] py-[4px] text-secondary-700 bg-secondary-100 }
+    .tag-Success-100 { @apply h-[20px] px-[6px] py-[4px] text-Success-700 bg-Success-100 }
+    .tag-gray-100 { @apply h-[20px] px-[6px] py-[4px] text-gray-scale-900 bg-gray-scale-100 }
 
 
     /**********************/
@@ -301,6 +304,12 @@
     /**********************/
 
     .container { @apply w-full max-w-[1320px]  mx-auto px-[16px]}
+    .flex-between {@apply flex justify-between items-center}
+    .flex-center {@apply flex items-center}
+    .hr {@apply w-full h-[1px] bg-gray-100 block}
+
+    .border-gray {@apply border border-gray-scale-100}
+    .transition {@apply transition-all duration-200 ease-in}
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
@@ -323,39 +332,27 @@
     .btn-footer { @apply px-[20px] py-[12px] bg-gray-scale-800 hover:bg-gray-scale-700 flex gap-[14px] transition-all duration-200 w-fit}
 
     .footer-bottom { @apply py-[37px] flex justify-between items-center border-t border-t-gray-scale-800 }
+
+    /* About */
+   
     
     /* Best Selling Courses */
-    .course { @apply border border-gray-100}
-    .flex-between {@apply flex justify-between items-center}
-    .hr {@apply w-full h-[1px] bg-gray-100 block}
-    .rating {@apply flex gap-[4px] items-center text-gray-scale-700}
-    .flex-center {@apply flex items-center}
+    .box {@apply w-[200px] h-[100px] shadow-lg flex items-center justify-center}
 
-    .box { @apply space-y-[8px] py-[24px] text-center w-[200px] border border-gray-scale-100 cursor-pointer hover:shadow-xl transition-all duration-200 ease-in}
+    
 
-    .key { @apply px-[12px] py-[6px] bg-gray-scale-50 hover:bg-primary-500 hover:text-white transition-all duration-200 ease-in}
-
-    /*popular instructor Section*/
-    .instruc {@apply border border-gray-scale-100 bg-white}
-    .instruc-content { @apply px-[16px] py-[12px] space-y-[4px] text-center}
-
-
-    /*Courses*/
-    .img-course {@apply h-[234px] w-[312px] object-cover}
-    .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
-    .pagination-active { @apply bg-primary-500 text-white}
 
 
   </style>
+
 <body>
-    <!--header-->
-    <header>
+  <header>
     <nav>
       <div>
-        <a href="#" class="body-md-500 navLink">Home</a>
-        <a href="#" class="body-md-500 navLink">Courses</a>
-        <a href="#" class="body-md-500 navLink">About</a>
-        <a href="#" class="body-md-500 navLink">Contact</a>
+        <a href="index.html" class="body-md-500 navLink">Home</a>
+        <a href="category.html" class="body-md-500 navLink">Courses</a>
+        <a href="about.html" class="body-md-500 navLink">About</a>
+        <a href="contact.html" class="body-md-500 navLink">Contact</a>
         <a href="#" class="body-md-500 navLink">Became an istructor</a>
       </div>
       <div class="langs body-md-400">
@@ -399,144 +396,203 @@
     </div>
   </header>
 
-  <section class="container mx-auto py-16 flex flex-col md:flex-row items-center justify-between gap-12">
-
-  <div class="md:w-1/2 space-y-4">
-    <h1 class="text-4xl font-bold">Connect with us</h1>
-    <p class="text-gray-600">Want to chat? We’d love to hear from you! Get in touch with our Customer Success Team to inquire about speaking events, advertising rates, or just say hello.</p>
-    <button class="btn-md btn-primary-primary flex items-center gap-[12px] rounded-sm">
-      <img src="images/Envelope.png" alt="" class="w-[20px]"> 
-      <span>Copy Email</span>
-    </button>
-  </div>
-
-  <div class="md:w-1/2 flex justify-center">
-    <img src="images/Fit.png" alt="Support representative" class="w-full max-w-md">
-  </div>
-
-</section>
-
-<section class="bg-gray-scale-50 py-[80px]">
-  <div class="container mx-auto text-center mb-[48px]">
-    <div class=" inline-block px-[32px] py-[16px]">
-      <h2 class="heading2">Our branches all over the world.</h2>
-      <p class="body-md-400 text-gray-scale-600 mt-[12px] max-w-[600px] mx-auto">
-        Phasellus sed quam eu eros faucibus cursus. Quisque mauris <br> 
-        urna, imperdiet id leo quis, luctus auctor nisi.
-      </p>
+  <main>
+    <div class="bg-gray-scale-50 py-[40px] text-center space-y-[16px]">
+      <h4 class="heading4">About</h4>
+      <div class="body-md-400">
+        <a href="" class="text-gray-scale-600">Home&nbsp;&nbsp;/&nbsp;&nbsp;</a>
+        <a href="">About</a>
+      </div>
     </div>
-  </div>
+    <section class="container flex-between py-[80px]">
+      <div class="space-y-[32px]">
+        <div class="space-y-[16px]">
+          <p class="display1 text-gray-scale-100">2007-2021</p>
+          <h1 class="heading1">We share knowledge with the world</h1>
+        </div>
+        <p class="body-2xl-400 text-gray-scale-400">Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          Praesent fermentum quam mauris. Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt
+          at vitae nulla.</p>
+      </div>
+      <figure class="masked">
+        <img src="assets/team.jpg" alt="Team collaborating">
+      </figure>
+    </section>
+    <div class="hr"></div>
+    <section class="container py-[80px] space-y-[80px]">
+      <div class="flex-between">
+        <div class="space-y-[20px] max-w-[368px]">
+          <h3 class="heading3">We Just keep growing with 6.3k Companies</h3>
+          <p class="body-lg-400 text-gray-scale-600">Nullam egestas tellus at enim ornare tristique. Class aptent taciti
+            sociosqu ad litora torquent.</p>
+        </div>
 
-  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
-    
-    <div class="border border-gray-scale-100 overflow-hidden hover:shadow-xl transition-all duration-200">
-        <img src="images/Branches.png" alt="Los Angeles Branch: 1702 Olympic Boulevard" class="w-full h-full object-cover block">
-    </div>
+        <ul class="grid grid-cols-4 gap-[24px]">
+          <li class="box"><img src="assets/netflex.png" alt="Netflix"></li>
+          <li class="box"><img src="assets/youtub.png" alt="YouTube"></li>
+          <li class="box"><img src="assets/googl.png" alt="Google"></li>
+          <li class="box"><img src="assets/lenovo.png" alt="Lenovo"></li>
+          <li class="box"><img src="assets/slack.png" alt="Slack"></li>
+          <li class="box"><img src="assets/Company Logo.png" alt="Verizon"></li>
+          <li class="box"><img src="assets/lexmark.png" alt="Lexmark"></li>
+          <li class="box"><img src="assets/microsoft.png" alt="Microsoft"></li>
+        </ul>
+      </div>
+      <div class="flex-between ">
+        <div class="flex items-start gap-[28px]">
+          <img src="assets/Users.png" alt="users icon">
+          <div class="flex flex-col gap-[8px]">
+            <h3 class="heading3">67.1k</h3>
+            <span class="body-md-500 text-gray-scale-700">Students</span>
+          </div>
+        </div>
 
-    <div class="border border-gray-scale-100 overflow-hidden hover:shadow-xl transition-all duration-200">
-        <img src="images/Branches (1).png" alt="Tokyo Branch: 901 N Pitt St" class="w-full h-full object-cover block">
-    </div>
+        <div class="flex items-start gap-[28px]">
+          <img src="assets/Notebook.png" alt="notebook icon">
+          <div class="flex flex-col gap-[8px]">
+            <h3 class="heading3">26k</h3>
+            <span class="body-md-500 text-gray-scale-700">Certified Instructor</span>
+          </div>
+        </div>
 
-    <div class="border border-gray-scale-100 overflow-hidden hover:shadow-xl transition-all duration-200">
-        <img src="images/Branches (2).png" alt="Moscow Branch: Anjeliersstraat 470H" class="w-full h-full object-cover block">
-    </div>
+        <div class="flex items-start gap-[28px]">
+          <img src="assets/GlobeHemisphereWest.png" alt="Globe Hemisphere West icon">
+          <div class="flex flex-col gap-[8px]">
+            <h3 class="heading3">72</h3>
+            <span class="body-md-500 text-gray-scale-700">Country Language</span>
+          </div>
+        </div>
 
-    <div class="border border-gray-scale-100 overflow-hidden hover:shadow-xl transition-all duration-200">
-        <img src="images/Branches (3).png" alt="Mumbai Branch: 36 East 20th St" class="w-full h-full object-cover block">
-    </div>
+        <div class="flex items-start gap-[28px]">
+          <img src="assets/CircleWavyCheck.png" alt="Circle Wavy Check icon">
+          <div class="flex flex-col gap-[8px]">
+            <h3 class="heading3">99.9%</h3>
+            <span class="body-md-500 text-gray-scale-700">Success Rate</span>
+          </div>
+        </div>
 
-  </div>
-</section>
+        <div class="flex items-start gap-[28px]">
+          <img src="assets/Stack.png" alt="Stack icon">
+          <div class="flex flex-col gap-[8px]">
+            <h3 class="heading3">57</h3>
+            <span class="body-md-500 text-gray-scale-700">Trusted Companies</span>
+          </div>
+        </div>
 
 
-<section class="w-[1320px] mx-auto py-[100px] flex justify-between items-start font-sans">
-  
-  <div class="w-[536px]">
-    <h2 class="text-[40px] font-semibold text-[#1D2026] mb-[24px]">Contact Us</h2>
-    <p class="text-[18px] text-[#6E7485] leading-[28px] mb-[48px]">
-      Will you be in Los Angeles or any other branches any time soon? Stop by the office! We’d love to meet.
-    </p>
-    
-    <div class="space-y-[32px]">
-      <div class="flex border-b border-[#E9EAF0] pb-[32px]">
-        <span class="w-[180px] text-[14px] font-bold text-[#FF6636] uppercase tracking-wider">Address</span>
-        <div class="text-[16px] text-[#1D2026] leading-[24px]">
-          1702 Olympic Boulevard<br>
-          Santa Monica, CA 90404
+      </div>
+    </section>
+
+    <section class="bg-primary-100 relative overflow-hidden h-[436px]">
+      <div class="container flex-between">
+        <div class="w-[648px] h-[436px] mx-auto relative">
+          <img src="assets/two-partner.png"  class="absolute top-[23px] left-0 right-0 m-auto object-cover bg-center h-[650px] scale-x-[-1]" alt="">
+        </div>
+
+
+
+
+      <div class="max-w-[536px]">
+        <p class="body-lg-500 text-primary-500 mb-[8px]">OUR ONE BILLION MISSION</p>
+        <h2 class="heading2 mb-[24px]">Our one billion mission sounds bold, We agree.</h2>
+        <div class="body-lg-400 text-gray-scale-700">
+          "We cannot solve our problems with the same thinking we used when we created them." — Albert Einstein.
+          Institutions are slow to change. Committees are where good ideas and innovative thinking go to die. Choose
+          agility over dogma. Embrace and drive change. We need to wipe the slate clean and begin with bold, radical
+          thinking.
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-scale-50 py-[80px]">
+      <div class="container flex-between">
+        <div class="max-w-[424px]">
+        <p class="body-lg-500 text-primary-500 mb-[8px]">OUR GALLERY</p>
+        <div class="space-y-[24px]">
+          <h2 class="heading2">We've been here almost 17 years</h2>
+        <p class="body-lg-400 text-gray-scale-700">Fusce lobortis leo augue, sit amet tristique nisi commodo in. Aliquam ac libero quis tellus venenatis
+          imperdiet. Sed sed nunc libero. Curabitur in urna ligula. Tanquam per conubia nostra.</p>
+        <button class="btn-md btn-icon-right bg-primary-500 text-white">
+          <span>Join Our Team </span>
+          <img src="assets/ArrowRight-white.png" alt="">
+        </button>
         </div>
       </div>
 
-      <div class="flex border-b border-[#E9EAF0] pb-[32px]">
-        <span class="w-[180px] text-[14px] font-bold text-[#FF6636] uppercase tracking-wider">Phone Number</span>
-        <div class="text-[16px] text-[#1D2026] leading-[24px]">
-          <p>(480) 555-0103</p>
-          <p>(219) 555-0114</p>
+      <div class="flex gap-[20px] flex-col">
+        <div class="flex justify-center items-end gap-[24px]">
+          <img src="assets/gallery 1.jpg" alt="Office space" class="w-[280px] h-[200px] object-cover">
+          <img src="assets/gallery 2.jpg" alt="People working at laptops" class="w-[312px] h-[232px] object-cover">
+          <img src="assets/gallery 3.jpg" alt="Person on phone" class="w-[120px] h-[163px] object-cover">
+        </div>
+        <div class="flex gap-[24px]">
+          <img src="assets/gallery 4.jpg" alt="Desk with plants" class="w-[224px] h-[264px] object-cover">
+          <img src="assets/gallery 5.jpg" alt="Team meeting" class="w-[424px] h-[312px] object-cover">
+          <div class="flex flex-col gap-[24px]">
+            <img src="assets/gallery 6.jpg" alt="Discussion" class="w-[238px] h-[160px] object-cover">
+            <img src="assets/gallery 7.jpg" alt="Woman smiling" class="w-[124px] h-[128px] object-cover">
+          </div>
         </div>
       </div>
+      </div>
+    </section>
 
-      <div class="flex">
-        <span class="w-[180px] text-[14px] font-bold text-[#FF6636] uppercase tracking-wider">Email Address</span>
-        <div class="text-[16px] text-[#1D2026] leading-[24px]">
-          <p>help.eduguard@gmail.com</p>
-          <p>career.eduguard@gmail.com</p>
+    <section class="container grid grid-cols-3 gap-[24px] py-[80px]">
+      <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">Eduguard fit us like a glove. Their team curates fresh, up-to-date courses from their marketplace and makes
+          them available to customers.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
         </div>
+        <h3 class="body-lg-500 mb-[6px]">Sundar Pichai</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">Chief Chairman of </span> 
+          <span class="body-md-500 text-secondary-500">Google</span>
+        </p>
       </div>
-    </div>
-  </div>
 
-  <div class="w-[648px] bg-white p-[40px] shadow-[0px_24px_48px_rgba(0,0,0,0.08)]">
-    <h3 class="text-[24px] font-semibold text-[#1D2026] mb-[12px]">Get In touch</h3>
-    <p class="text-[#8C94A3] text-[14px] mb-[32px]">
-      Feel free contact with us, we love to make new partners & friends.
-    </p>
-    
-    <form class="space-y-[24px]">
-      <div class="flex gap-[16px]">
-        <div class="w-1/2">
-          <label class="block text-[14px] text-[#1D2026] mb-[8px]">First Name</label>
-          <input type="text" placeholder="First name..." 
-                 class="w-full h-[48px] px-[16px] border border-[#E9EAF0] text-[16px] outline-none focus:border-[#FF6636]">
+       <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">Edugaurd responds to the needs of the business in an agile and global manner. It’s truly the best solution for our employees and their careers.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
         </div>
-        <div class="w-1/2">
-          <label class="block text-[14px] text-[#1D2026] mb-[8px]">Last Name</label>
-          <input type="text" placeholder="Last name..." 
-                 class="w-full h-[48px] px-[16px] border border-[#E9EAF0] text-[16px] outline-none focus:border-[#FF6636]">
+        <h3 class="body-lg-500 mb-[6px]">Satya Nadella</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">CEO of </span> 
+          <span class="body-md-500 text-secondary-500">Microsoft</span>
+        </p>
+      </div>
+
+       <div class="text-center space-y-[36px]">
+        <div class="relative bg-gray-scale-50 px-[24px] py-[24px] space-y-[8px]
+          before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[16px]
+          before:border-l-[12px] before:border-l-transparent
+          before:border-r-[12px] before:border-r-transparent
+          before:border-t-[16px] before:border-t-gray-scale-50">
+          <div class="pt-[14px] px-[10px] pb-[12px]"><img src="assets/quote1.png" alt=""></div>
+          <p class="body-xl-400">In total, it was a big success, I would get emails about what a fantastic resource it was.</p>
+          <div class="pt-[14px] px-[10px] pb-[12px] flex justify-self-end"><img src="assets/quote2.png" alt=""></div>
         </div>
+        <h3 class="body-lg-500 mb-[6px]">Ted Sarandos</h3>
+        <p>
+          <span class="body-md-400 text-gray-scale-600">Chief Executive Officer of </span> 
+          <span class="body-md-500 text-secondary-500">Netflix</span>
+        </p>
       </div>
-
-      <div>
-        <label class="block text-[14px] text-[#1D2026] mb-[8px]">Email</label>
-        <input type="email" placeholder="Email Address" 
-               class="w-full h-[48px] px-[16px] border border-[#E9EAF0] text-[16px] outline-none focus:border-[#FF6636]">
-      </div>
-
-      <div>
-        <label class="block text-[14px] text-[#1D2026] mb-[8px]">Subject</label>
-        <input type="text" placeholder="Message Subject" 
-               class="w-full h-[48px] px-[16px] border border-[#E9EAF0] text-[16px] outline-none focus:border-[#FF6636]">
-      </div>
-
-      <div>
-        <label class="block text-[14px] text-[#1D2026] mb-[8px]">Message</label>
-        <textarea placeholder="Message Subject" 
-                  class="w-full h-[148px] p-[16px] border border-[#E9EAF0] text-[16px] outline-none resize-none focus:border-[#FF6636]"></textarea>
-      </div>
-
-      <button class="bg-[#FF6636] text-white px-[32px] py-[16px] font-semibold flex items-center gap-[12px] transition-all hover:bg-[#E0562D]">
-        <span>Send Message</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.5 2.5L2.5 8.75L8.75 11.25L11.25 17.5L17.5 2.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </form>
-  </div>
-</section>
-<section class="w-full h-[480px] overflow-hidden">
-  <img src="images/Rectangle 36 (1).png" alt="Location Map" class="w-full h-full">
-</section>
-
-
-    <!-- Footer -->
+    </section>
+  </main>
+  <!-- Footer -->
   <footer class="relative">
     <div class="container">
       <div class="flex justify-between items-center py-[100px]">
@@ -710,4 +766,5 @@
     </div>
   </footer>
 </body>
+
 </html>
