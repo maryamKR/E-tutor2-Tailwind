@@ -314,6 +314,7 @@
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
     .navLink { @apply hover:text-white p-[16px] hover:border-t hover:border-t-primary-500 transition-all duration-200 ease-in}
+    .navActive {@apply border-t border-t-primary-500}
     .langs { @apply flex gap-[24px] }
     .lang { @apply flex gap-[6px] items-center hover:text-white cursor-pointer transition-all duration-200 ease-in}
     /* navbar */
@@ -337,7 +338,7 @@
    
     
     /* Best Selling Courses */
-    .box {@apply w-[200px] h-[100px] shadow-lg flex items-center justify-center}
+    .box {@apply w-[200px] h-[100px] shadow-[0px_0px_32px_0px_#091A4412] flex items-center justify-center}
 
     
 
@@ -351,18 +352,22 @@
       <div>
         <a href="index.html" class="body-md-500 navLink">Home</a>
         <a href="category.html" class="body-md-500 navLink">Courses</a>
-        <a href="about.html" class="body-md-500 navLink">About</a>
+        <a href="about.html" class="body-md-500 navLink navActive">About</a>
         <a href="contact.html" class="body-md-500 navLink">Contact</a>
         <a href="#" class="body-md-500 navLink">Became an istructor</a>
       </div>
       <div class="langs body-md-400">
         <div class="lang">
           <span>USD</span>
-          <img src="assets/CaretDown.png" alt="">
+          <svg class="w-[12px] h-[12px]" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
         <div class="lang">
           <span>ENG</span>
-          <img src="assets/CaretDown.png" alt="">
+          <svg class="w-[12px] h-[12px]" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
       </div>
     </nav>
@@ -405,12 +410,12 @@
       </div>
     </div>
     <section class="container flex-between py-[80px]">
-      <div class="space-y-[32px]">
+      <div class="space-y-[32px] max-w-[535px]">
         <div class="space-y-[16px]">
           <p class="display1 text-gray-scale-100">2007-2021</p>
           <h1 class="heading1">We share knowledge with the world</h1>
         </div>
-        <p class="body-2xl-400 text-gray-scale-400">Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        <p class="body-xxl-400 text-gray-scale-400">Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Praesent fermentum quam mauris. Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt
           at vitae nulla.</p>
       </div>
@@ -486,10 +491,8 @@
     <section class="bg-primary-100 relative overflow-hidden h-[436px]">
       <div class="container flex-between">
         <div class="w-[648px] h-[436px] mx-auto relative">
-          <img src="assets/two-partner.png"  class="absolute top-[23px] left-0 right-0 m-auto object-cover bg-center h-[650px] scale-x-[-1]" alt="">
+          <img src="assets/two-partner.png"  class="absolute top-[23px] left-0 right-0 m-auto object-cover bg-center h-[650px] scale-x-[-1] shadow-[-40px_40px_50px_0px_#0000004D]" alt=""> 
         </div>
-
-
 
 
       <div class="max-w-[536px]">
