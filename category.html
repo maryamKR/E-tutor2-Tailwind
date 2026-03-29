@@ -295,11 +295,29 @@
       /* Form elements */
     /**********************/
 
-    .search-form { @apply border border-gray-scale-100 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-[3px] hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
+    .search-form {
+      @apply flex items-center gap-[12px] pl-[18px] h-[48px] text-gray-scale-900
+            outline outline-1 outline-gray-scale-100
+            transition-all duration-200
+            hover:outline-[3px] hover:outline-primary-200;
+    }
 
-    .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-[3px] hover:outline-primary-200 }
+    .search-form:focus-within {
+      @apply outline-1 outline-primary-500;
+    }
 
-    .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent focus:border-gray-scale-500 focus:text-gray-scale-500}
+    .Dropdown { 
+      @apply text-gray-scale-700 px-[16px] h-[48px] cursor-pointer 
+      flex justify-between items-center
+      outline outline-1 outline-gray-scale-100
+      transition-all duration-200
+      hover:outline-[3px] hover:outline-primary-200; }
+
+    .Dropdown:focus-within {
+      @apply outline-1 outline-primary-500;
+    }
+
+    .category { @apply flex justify-between py-[12px] px-[18px] items-center w-[200px] h-[48px] border border-gray-scale-800 bg-transparent text-gray-scale-500 }
 
      /**********************/
       /* Classes */
@@ -390,10 +408,16 @@
         <div class="body-lg-400 forms">
           <button class="Dropdown w-[200px]">
             Browse
-            <img src="assets/CaretDown.png" alt="CaretDown">
+            <svg class="w-[16px] h-[16px]" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L8 11L3 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
           </button>
           <div class="search-form w-[424px]">
-            <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
+            <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.4431 16.4438L20.9994 21.0001" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
             <input type="text" placeholder="What do you want learn..."
               class="outline-none placeholder-gray-scale-500" />
           </div>
@@ -1441,6 +1465,7 @@
   </main>
 
   <!-- Footer -->
+  <!-- Footer -->
   <footer class="relative">
     <div class="container">
       <div class="flex justify-between items-center py-[100px]">
@@ -1493,28 +1518,36 @@
         <div class="space-y-[20px]">
           <h4 class="label-lg">TOP 4 CATEGORY</h4>
           <ul class="space-y-[6px]">
-            <li class=" nav-link-footer">
-              <a class="group body-md-400" href="#">Development
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Development
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Finance & Accounting
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Finance & Accounting
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Design
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Design
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Business
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Business
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
           </ul>
@@ -1522,28 +1555,36 @@
         <div class="space-y-[20px]">
           <h4 class="label-lg">QUICK LINKS</h4>
           <ul class="space-y-[6px]">
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">About
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">About
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Become Instructor
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Become Instructor
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Contact
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="Arrow">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Contact
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Career
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Career
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
           </ul>
@@ -1552,28 +1593,36 @@
         <div class="space-y-[20px]">
           <h4 class="label-lg">SUPPORT</h4>
           <ul class="space-y-[6px]">
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Help Center
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Help Center
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">FAQs
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">FAQs
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Terms & Condition
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Terms & Condition
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
-            <li class="nav-link-footer">
-              <a class="group body-md-400" href="#">Privacy Policy
-                <img class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  src="assets/ArrowRight-white.png" alt="">
+            <li class="group nav-link-footer">
+              <a class="body-md-400" href="#">Privacy Policy
+                <svg class="arrow opacity-0 group-hover:opacity-100 transition-all duration-200 w-[16px] h-[16px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 12H20.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
             </li>
           </ul>
@@ -1607,7 +1656,10 @@
         <div class="body-lg-400">
           <button class="group category">
             English
-            <img src="assets/ChevronDown.png" alt="">
+            <svg class="w-[16px] h-[16px]" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L8 11L3 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
           </button>
         </div>
       </div>
