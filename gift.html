@@ -290,13 +290,39 @@
       /* Form elements */
     /**********************/
 
-    .search-form { @apply border border-gray-scale-100 flex items-center gap-[12px] py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-[3px] hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500 }
+    
+    .search-form {
+      @apply flex items-center gap-[12px] pl-[18px] h-[48px] text-gray-scale-900
+            outline outline-1 outline-gray-scale-100
+            transition-all duration-200
+            hover:outline-[3px] hover:outline-primary-200;
+    }
 
-    .Dropdown { @apply border border-gray-scale-100 text-gray-scale-500 px-[16px] py-[18px] flex items-center justify-between h-[48px] cursor-pointer hover:outline-[3px] hover:outline-primary-200 }
+    .search-form:focus-within {
+      @apply outline-1 outline-primary-500;
+    }
 
-    .category { @apply flex justify-between py-[12px] px-[18px] items-center text-gray-scale-700 w-[200px] h-[48px] border border-gray-scale-800 bg-transparent focus:border-gray-scale-500 focus:text-gray-scale-500}
+    .Dropdown { 
+      @apply text-gray-scale-700 px-[16px] h-[48px] cursor-pointer 
+      flex justify-between items-center
+      outline outline-1 outline-gray-scale-100
+      transition-all duration-200
+      hover:outline-[3px] hover:outline-primary-200; }
 
-    .Normal-input {@apply border border-gray-scale-100 py-[12px] pl-[18px] h-[48px] hover:outline hover:outline-[3px] hover:outline-primary-200 focus-within:outline-none focus-within:border-primary-500}
+    .Dropdown:focus-within {
+      @apply outline-1 outline-primary-500;
+    }
+
+    .category { @apply flex justify-between py-[12px] px-[18px] items-center w-[200px] h-[48px] border border-gray-scale-800 bg-transparent text-gray-scale-500 }
+
+    .Normal-input {@apply flex items-start py-[12px] pl-[18px] text-gray-scale-900
+            outline outline-1 outline-gray-scale-100
+            transition-all duration-200
+            hover:outline-[3px] hover:outline-primary-200;}
+
+    .Normal-input:focus-within {
+      @apply outline-1 outline-primary-500;
+    }
 
      /**********************/
       /* Classes */
@@ -382,10 +408,16 @@
         <div class="body-lg-400 forms">
           <button class="Dropdown w-[200px]">
             Browse
-            <img src="assets/CaretDown.png" alt="CaretDown">
+            <svg class="w-[16px] h-[16px]" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L8 11L3 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
           </button>
           <div class="search-form w-[424px]">
-            <img src="assets/MagnifyingGlass.png" alt="MagnifyingGlass">
+            <svg class="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.4431 16.4438L20.9994 21.0001" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
             <input type="text" placeholder="What do you want learn..."
               class="outline-none placeholder-gray-scale-500" />
           </div>
@@ -423,21 +455,25 @@
         <div class="space-y-[24px]">
           <p class="body-xl-500">Recipient's Information</p>
           <div class="space-y-[18px]">
-            <div class="space-y-[6px]">
+            <div class="flex flex-col gap-[6px]">
               <label for="full_name" class="body-md-400">Recipient's Name</label>
               <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full">
             </div>
 
-            <div class="space-y-[6px]">
+            <div class="flex flex-col gap-[6px]">
               <label for="email" class="body-md-400">Recipient's Email:</label>
               <input type="text" name="" id="email" placeholder="Email Adress" class="Normal-input w-full">
             </div>
 
-            <div class="space-y-[6px]">
+            <div class="flex flex-col gap-[6px]">
               <label for="msg" class="body-md-400">Gift Message</label>
-              <textarea name="" id="msg" class="Normal-input w-full" placeholder="Add your personal message here..."></textarea>
+              <textarea name="" id="msg" type="text" class="Normal-input w-full h-[120px]" placeholder="Add your personal message here..."></textarea>
             </div>
           </div>
+        </div>
+
+        <div class="space-y-[24px]">
+          <p class="body-xl-500">Payment Method</p>
         </div>
       </div>
       <div></div>
