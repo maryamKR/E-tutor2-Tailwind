@@ -1,5 +1,3 @@
-
-
 const arr_courses = [
 {
   info: {
@@ -127,13 +125,8 @@ const arr_courses = [
 }
 ]
 
-
-document.querySelectorAll(".Hovercourse").forEach((card, index) => {
-  card.addEventListener("mouseenter", function () {
-    const obj = arr_courses[index];
-    const popup = this.querySelector(".js_popup");
-
-    const courseHTML = `<div class="space-y-[17px]"> 
+const courseHTML = function (obj) {
+  return `<div class="space-y-[17px]"> 
                 <div class="space-y-[8px] px-[20px]">
                   <div class="flex-between">
                     <span class="tag-secondary-100 label-sm">${obj.info.category}</span>
@@ -247,9 +240,17 @@ document.querySelectorAll(".Hovercourse").forEach((card, index) => {
                     <span>Add to Cart</span></button>
                   <button class="btn-md btn-secondary-primary w-full">Course Detail</button>
                 </div>
-              </div>`
+      </div>`
+}
 
-    popup.innerHTML = courseHTML;
+document.querySelectorAll(".Hovercourse").forEach((card, index) => {
+  card.addEventListener("mouseenter", function () {
+    const obj = arr_courses[index];
+    const popup = this.querySelector(".js_popup");
+
+    
+
+    popup.innerHTML = courseHTML(obj);
     this.querySelector(".hide_element").classList.remove("hidden");
   });
 
