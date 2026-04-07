@@ -315,20 +315,29 @@
 
     .category { @apply flex justify-between py-[12px] px-[18px] items-center w-[200px] h-[48px] border border-gray-scale-800 bg-transparent text-gray-scale-500 }
 
-    .Normal-input {@apply flex items-start py-[12px] pl-[18px] text-gray-scale-900
+    .Normal-input { @apply flex items-start py-[12px] pl-[18px] text-gray-scale-900
             outline outline-1 outline-gray-scale-100
             transition-all duration-200
-            hover:outline-[3px] hover:outline-primary-200;}
+            hover:outline-[3px] hover:outline-primary-200}
 
     .Normal-input:focus-within {
       @apply outline-1 outline-primary-500;
     }
+
+    .payment-form {@apply w-full flex items-center gap-[24px] h-[52px] px-[24px] text-gray-scale-700
+    outline outline-1 outline-gray-scale-100 }
+
+    .payment-form-2 {@apply w-full flex items-center gap-[24px] h-[52px] px-[24px]
+    outline outline-1 outline-gray-scale-100 }
 
      /**********************/
       /* Classes */
     /**********************/
 
     .container { @apply w-full max-w-[1320px]  mx-auto px-[16px]}
+        .flex-between {@apply flex justify-between items-center}
+    .flex-center {@apply flex items-center}
+    .hr {@apply w-full h-[1px] bg-gray-100 block}
 
     /* nav */
     nav { @apply bg-gray-scale-900 text-gray-scale-500 flex justify-between items-center px-[32px] h-[52px]}
@@ -353,26 +362,7 @@
 
     .footer-bottom { @apply py-[37px] flex justify-between items-center border-t border-t-gray-scale-800 }
     
-    /* Best Selling Courses */
-    .course { @apply border border-gray-100}
-    .flex-between {@apply flex justify-between items-center}
-    .hr {@apply w-full h-[1px] bg-gray-100 block}
-    .rating {@apply flex gap-[4px] items-center text-gray-scale-700}
-    .flex-center {@apply flex items-center}
 
-    .box { @apply space-y-[8px] py-[24px] text-center w-[200px] border border-gray-scale-100 cursor-pointer hover:shadow-xl transition-all duration-200 ease-in}
-
-    .key { @apply px-[12px] py-[6px] bg-gray-scale-50 hover:bg-primary-500 hover:text-white transition-all duration-200 ease-in}
-
-    /*popular instructor Section*/
-    .instruc {@apply border border-gray-scale-100 bg-white}
-    .instruc-content { @apply px-[16px] py-[12px] space-y-[4px] text-center}
-
-
-    /*Courses*/
-    .img-course {@apply h-[234px] w-[312px] object-cover}
-    .page { @apply rounded-full cursor-pointer w-[48px] h-[48px] flex items-center justify-center bg-transparent hover:bg-primary-200 hover:text-primary-500}
-    .pagination-active { @apply bg-primary-500 text-white}
 
 
   </style>
@@ -472,8 +462,55 @@
           </div>
         </div>
 
-        <div class="space-y-[24px]">
+        <div class="space-y-[16px]">
           <p class="body-xl-500">Payment Method</p>
+
+        
+          <div class="payment-form body-md-400">
+            <img src="assets/visa.png" alt="">
+            <p class="w-[200px]">4855 **** **** ****</p>
+            <p class="w-[124px]">04/24</p>
+            <p class="w-[124px]">Vako Shvili</p>
+          </div>
+
+          <div class="payment-form body-md-400">
+            <img src="assets/mastercard.png" alt="">
+            <p class="w-[200px]">5795 **** **** ****</p>
+            <p class="w-[124px]">04/24</p>
+            <p class="w-[124px]">Vako Shvili</p>
+          </div>
+
+          <div class="payment-form-2 body-sm-400 text-gray-scale-500">
+            <img src="assets/pypal.png" alt="">
+            <p>You will be redirected to the PayPal site after reviewing your order.</p>
+          </div>
+
+          <div class="payment-form-2 body-md-400 flex-between text-gray-scale-700">
+            <div class="flex-center gap-[24px]">
+              <img src="assets/CreditCard2.png" alt="">
+              <p>New Payment Cards</p>
+            </div>
+            <img src="assets/CheckCircle.png" alt="">
+          </div>
+        </div>
+
+        <div class="space-y-[18px]">
+          <div class="flex flex-col gap-[6px]">
+            <label for="full_name" class="body-md-400">Name</label>
+            <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full">
+          </div>
+
+          <div class="flex flex-col gap-[6px]">
+            <label for="full_name" class="body-md-400">Card Number</label>
+            <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full">
+          </div>
+
+          <div>
+            <div class="flex flex-col gap-[6px]">
+              <input type="text" placeholder="What do you want learn..."
+              class="Normal-input w-full" />
+            </div>
+          </div>
         </div>
       </div>
       <div></div>
