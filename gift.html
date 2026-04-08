@@ -315,7 +315,7 @@
 
     .category { @apply flex justify-between py-[12px] px-[18px] items-center w-[200px] h-[48px] border border-gray-scale-800 bg-transparent text-gray-scale-500 }
 
-    .Normal-input { @apply flex items-start py-[12px] pl-[18px] text-gray-scale-900
+    .Normal-input { @apply flex items-start py-[12px] pl-[18px]
             outline outline-1 outline-gray-scale-100
             transition-all duration-200
             hover:outline-[3px] hover:outline-primary-200}
@@ -329,6 +329,11 @@
 
     .payment-form-2 {@apply w-full flex items-center gap-[24px] h-[52px] px-[24px]
     outline outline-1 outline-gray-scale-100 }
+
+    .icon-form {@apply w-full flex items-center h-[48px] px-[24px]
+    outline outline-1 outline-gray-scale-100 }
+
+    .line-44 { @apply border border-gray-scale-100 w-[32px] -rotate-90}
 
      /**********************/
       /* Classes */
@@ -440,7 +445,7 @@
     </div>
 
     <section class="container py-[80px]">
-      <div class="space-y-[40px] max-w-[684px]">
+      <div class="space-y-[40px] max-w-[648px]">
         <h3 class="heading3">Gift Course</h3>
         <div class="space-y-[24px]">
           <p class="body-xl-500">Recipient's Information</p>
@@ -497,20 +502,32 @@
         <div class="space-y-[18px]">
           <div class="flex flex-col gap-[6px]">
             <label for="full_name" class="body-md-400">Name</label>
-            <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full">
+            <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full placeholder-gray-scale-500 body-lg-400 ">
           </div>
 
           <div class="flex flex-col gap-[6px]">
-            <label for="full_name" class="body-md-400">Card Number</label>
-            <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-full">
-          </div>
-
-          <div>
-            <div class="flex flex-col gap-[6px]">
-              <input type="text" placeholder="What do you want learn..."
-              class="Normal-input w-full" />
+            <label for="full_name" class="body-md-400">Name</label>
+            <div class="icon-form">
+              <img src="assets/mastercard.png" class="w-[20px] h-[20px]" alt="">
+                <span class="line-44"></span>
+              <input type="text" name="" id="full_name" placeholder="Label" class=" placeholder-gray-scale-500 body-lg-400 outline-none">
             </div>
           </div>
+
+            <div class="flex gap-[18px]">
+              <div class="flex flex-col gap-[6px]">
+              <label for="full_name" class="body-md-400">MM / YY</label>
+              <input type="text" name="" id="full_name" placeholder="MM / YY" class="Normal-input w-[315px]">
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <label for="full_name" class="body-md-400">CVC</label>
+              <input type="text" name="" id="full_name" placeholder="Full name" class="Normal-input w-[315px]">
+            </div>
+            </div>
+            <div class="flex gap-[10px]">
+              <input type="checkbox" name="" id="" class="appearance-none border border-gray-scale-100 w-[22px] h-[22px] checked:bg-primary-500 checked:border-primary-500 text-white">
+            <p>Remember this card, save it on my card list</p>
+            </div>
         </div>
       </div>
       <div></div>
